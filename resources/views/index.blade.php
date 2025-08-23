@@ -119,28 +119,28 @@
       <div class="col-lg-12">
         <div class="owl-service-item owl-carousel">
           
-          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/pantai-1.png');">
+          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/pantai-1.png');">
             <div class="down-content">
               <h4>Paket Wisata A</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
             </div>
           </a>
           
-          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/airterjun-1.png');">
+          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/airterjun-1.png');">
             <div class="down-content">
               <h4>Paket Wisata B</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
             </div>
           </a>
           
-          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/gunung-1.png');">
+          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/gunung-1.png');">
             <div class="down-content">
               <h4>Paket Wisata C</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
             </div>
           </a>
           
-          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/pantai-2.jpg');">
+          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/pantai-2.jpg');">
             <div class="down-content">
               <h4>Paket Wisata D</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
