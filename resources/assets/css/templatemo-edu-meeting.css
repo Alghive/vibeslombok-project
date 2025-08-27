@@ -157,7 +157,7 @@ a {
 }
 
 a:hover {
-  color: #fc3;
+  color: #f5a425;
 }
 
 h1,
@@ -265,6 +265,52 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
+}
+
+/* custom border-radius */
+.rounded-4 {
+  border-radius: 1rem !important; /* sekitar 24px */
+}
+
+.rounded-5 {
+  border-radius: 1.5rem !important; /* sekitar 32px */
+}
+
+/* 
+---------------------------------------------
+login
+--------------------------------------------- 
+*/
+
+.box-area {
+  width: 930px;
+}
+/*------------ Right box ------------*/
+.right-box {
+  padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder {
+  font-size: 16px;
+}
+.rounded-4 {
+  border-radius: 20px;
+}
+.rounded-5 {
+  border-radius: 30px;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px) {
+  .box-area {
+    margin: 0 10px;
+  }
+  .left-box {
+    height: 100px;
+    overflow: hidden;
+  }
+  .right-box {
+    padding: 20px;
+  }
 }
 
 /* 
@@ -744,6 +790,229 @@ header
     display: flex !important;
   }
 }
+
+/* Button Sign In di Navbar */
+.header-area .main-nav .nav li.sign-in-btn a {
+  border: 2px solid #ffffffff;   /* outline warna utama */
+  background: transparent;     /* transparan sebelum hover */
+  color: #ffffffff !important;   /* teks warna utama */
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+
+/* Saat dihover jadi solid */
+.header-area .main-nav .nav li.sign-in-btn a:hover {
+  background: #0d6efd; 
+  color: #fff !important;
+  border: 2px solid #0d6efd;
+}
+
+/* User Icon di Navbar */
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* soft shadow default */
+  border: 1px solid #ddd;
+}
+
+.user-avatar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* efek glow saat hover */
+}
+
+/* Avatar besar di dropdown */
+.user-avatar-lg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* shadow halus */
+}
+
+/* Dropdown User Menu */
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1000;
+  padding-bottom: 10px; /* tambahan jarak bawah */
+}
+
+.user-dropdown .user-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: none;
+}
+
+.user-dropdown h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+.user-dropdown p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0; /* spasi atas-bawah antar grup */
+}
+
+.user-dropdown ul li {
+  margin: 0; /* rapikan, biar item menempel */
+  padding: 0;
+}
+
+.user-dropdown ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%; /* <= biar penuh di li */
+  gap: 10px; /* jarak ikon-teks */
+  padding: 12px 18px; /* area klik konsisten */
+  font-size: 13px;
+  font-weight: 400;
+  color: #333 !important;
+  background: #fff !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  box-sizing: border-box; /* biar padding ga nambah width */
+}
+
+.user-dropdown ul li a i {
+  margin-right: 10px;
+  color: #333 !important; /* icon juga hitam */
+  font-size: 14px;
+  flex-shrink: 0; /* icon ga ketarik */
+}
+
+.nav li.user-icon .user-dropdown ul li a:hover {
+  /* background: #f0f0f0 !important; */
+  color: #333 !important;
+  padding-left: 20px;
+}
+
+.user-dropdown ul li a:hover i {
+  color: #333 !important; /* icon tetap hitam */
+}
+
+/* Override hover khusus di dropdown */
+.user-dropdown ul li a:hover {
+  background: #f0f0f0 !important; /* abu muda */
+  color: #333 !important; /* teks tetap hitam */
+}
+
+/* Pastikan .user-dropdown tidak ikut pewarnaan dari nav li:hover */
+.nav li.user-icon:hover .user-dropdown ul li a {
+  color: #333 !important;
+}
+
+.nav li.user-icon .user-dropdown ul li a {
+  background: transparent !important; /* hilangkan background default */
+}
+
+.nav li.user-icon .user-dropdown ul li a:hover {
+  background: transparent !important; /* pastikan tetap transparan */
+  color: #333 !important;
+  padding-left: 20px;
+}
+
+/* Tombol Edit Profile */
+.edit-profile-btn {
+  padding: 0 15px 15px; /* hanya kasih jarak, tanpa background */
+  background: transparent; /* jangan ada background */
+  border: none; /* hilangkan border */
+  border-bottom: 1px solid #dededeff;
+}
+
+.user-dropdown .edit-profile-btn a {
+  display: flex !important; /* pastikan flex */
+  align-items: center !important; /* vertikal center */
+  justify-content: center !important; /* horizontal center */
+  gap: 8px !important; /* jarak icon-teks */
+
+  width: 100% !important; /* full width tombol */
+  background: #828282ff !important; /* abu muda */
+  color: #ffffffff !important; /* teks hitam */
+  padding: 12px 0 !important; /* padding atas-bawah */
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1) !important;
+  line-height: 1 !important; /* biar teks pas */
+  text-transform: uppercase !important; /* biar sama kayak gambar */
+}
+
+.user-dropdown .edit-profile-btn a i {
+  font-size: 16px !important;
+}
+
+/* Hover tombol Edit Profile */
+.user-dropdown .edit-profile-btn a:hover,
+.user-dropdown .edit-profile-btn a:focus,
+.user-dropdown .edit-profile-btn a:active {
+  background: #0015ff !important; /* biru */
+  color: #ffffff !important; /* teks putih */
+}
+
+/* Override biar nggak ketarik aturan nav global */
+.nav li.user-icon:hover .user-dropdown .edit-profile-btn a {
+  color: #ffffffff !important;
+}
+
+.user-dropdown .divider {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: red !important; /* abu tua */
+  margin: 10px 0; /* kasih jarak atas bawah biar kelihatan */
+}
+
+.nav li.user-icon .user-dropdown .edit-profile-btn a {
+  color: #ffffff !important;
+}
+
+@media (max-width: 767px) {
+  /* Override khusus tombol Edit Profile */
+  .nav li.user-icon .user-dropdown .edit-profile-btn a {
+    background: #828282ff !important; /* default abu */
+    color: #ffffff !important;
+  }
+
+  .nav li.user-icon .user-dropdown .edit-profile-btn a:hover,
+  .nav li.user-icon .user-dropdown .edit-profile-btn a:focus {
+    background: #0015ff !important; /* hover biru */
+    color: #ffffff !important;
+  }
+}
+
+
 
 /* 
 ---------------------------------------------
@@ -2052,7 +2321,8 @@ form .btn-primary:hover {
 
 /* === Button Detail === */
 .btn-detail {
-  background: linear-gradient(45deg, #0d6efd, #0a58ca);
+  /* background: linear-gradient(45deg, #0d6efd, #0a58ca); */
+  background: #9b9b9bff;
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -2088,6 +2358,225 @@ form .btn-primary:hover {
   padding: 1.5rem;
   max-height: 70vh;
   overflow-y: auto;
+}
+
+/* 
+---------------------------------------------
+profile page
+--------------------------------------------- 
+*/
+
+
+/* Sidebar */
+    .profile-sidebar {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.profile-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.profile-sidebar ul li.sidebar-heading {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin: 20px 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.profile-sidebar ul li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.profile-sidebar ul li.active a,
+.profile-sidebar ul li a:hover {
+  background: #007bff;
+  color: #fff;
+  font-weight: 500;
+}
+
+
+    /* Konten */
+    .profile-content {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+    }
+    .profile-content .form-group {
+      margin-bottom: 20px;
+    }
+
+    /* Atur visibilitas konten */
+    .content-section {
+      display: none;
+    }
+    .content-section.active {
+      display: block;
+    }
+
+    /* Foto Profil */
+.profile-picture {
+  position: relative;
+}
+.profile-picture .profile-img {
+  width: 98px;
+  height: 98px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #edededff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.upload-btn label {
+  cursor: pointer;
+}
+
+/* Form Styling */
+.profile-content form .form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+}
+.profile-content form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  transition: all 0.2s ease;
+}
+.profile-content form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* Radio Button */
+.gender-options label {
+  margin-right: 15px;
+  font-weight: 400;
+  color: #555;
+  cursor: pointer;
+}
+.gender-options input {
+  margin-right: 5px;
+}
+
+/* Button */
+/* Tombol Simpan */
+.btn-primary.btn-block {
+  display: block;
+  width: 100%;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary.btn-block:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.4);
+}
+
+.btn-primary.btn-block:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(0, 86, 179, 0.3);
+}
+
+.btn-outline-secondary {
+  border-radius: 8px;
+  padding: 6px 14px;
+}
+
+/* Konten Card */
+.profile-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* font size */
+.profile-content .form-control,
+.profile-content label,
+.profile-content button {
+  font-size: 14px;
+}
+
+.profile-sidebar {
+  font-size: 14px;
+}
+
+.profile-sidebar ul li.sidebar-heading {
+  font-size: 14px; /* subjudul */
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.profile-sidebar ul li a {
+  font-size: 14px; /* menu item */
+}
+
+/* tabel riwayat */
+.table th, .table td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .profile-sidebar {
+    margin-bottom: 20px; /* kasih jarak bawah saat sidebar ada di atas konten */
+  }
+
+  .profile-content {
+    padding: 20px; /* biar lebih enak dibaca di HP */
+  }
+}
+@media (max-width: 992px) {
+  .profile-sidebar {
+    margin-bottom: 20px; /* kasih jarak bawah saat sidebar ada di atas konten */
+  }
+
+  .profile-content {
+    padding: 20px; /* biar lebih enak dibaca di HP */
+  }
 }
 
 /* 

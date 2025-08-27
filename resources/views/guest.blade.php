@@ -23,8 +23,11 @@
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+
+  </head>
 
 <body>
 
@@ -64,7 +67,7 @@
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Services</a>
                             <ul class="sub-menu">
@@ -75,39 +78,10 @@
                         <li class="scroll-to-section"><a href="#courses">About Us</a></li> 
                         <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
                         <li class="scroll-to-section"><a href="#contact">Blog</a></li> 
-
-                        <!-- User Icon -->
-                       <li class="user-icon">
-                        <a href="javascript:void(0)" id="userMenuToggle">
-                          <img src="assets/images/user.jpg" alt="User" class="user-avatar">
-                        </a>
-
-                        <!-- Dropdown User Menu -->
-                        <div class="user-dropdown" id="userDropdown">
-                          <div class="user-info">
-                            <img src="assets/images/user.jpg" alt="User" class="user-avatar-lg">
-                            <div>
-                              <h5>Rizky Haidar</h5>
-                              <p>rizkyhaidar04@gmail.com</p>
-                            </div>
-                          </div>
-
-                          <!-- Tambahan tombol edit profil -->
-                          <div class="edit-profile-btn" style="margin-bottom: 0px;">
-                            <a href="{{ route('profile') }}">
-                              <i class="fa fa-edit"></i> Edit Profile
-                            </a>
-                          </div>
-
-                          <ul>
-                            <li><a href="#"><i class="fa fa-user-cog"></i> History</a></li>
-                            <li><a href="#"><i class="fa fa-shield-alt"></i> Security</a></li>
-                            <li><a href="{{ route('guest') }}"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
-                          </ul>
-                        </div>
-
-                      </li>
-                      </ul>        
+                        <li class="nav-item sign-in-btn"><a href="{{ route('login') }}">Sign In</a></li>
+ 
+                      </ul>
+      
                       <a class='menu-trigger'>
                           <span>Menu</span>
                       </a>
@@ -150,28 +124,28 @@
       <div class="col-lg-12">
         <div class="owl-service-item owl-carousel">
           
-          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/pantai-1.png');">
+          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/pantai-1.png');">
             <div class="down-content">
               <h4>Paket Wisata A</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
             </div>
           </a>
           
-          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/airterjun-1.png');">
+          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/airterjun-1.png');">
             <div class="down-content">
               <h4>Paket Wisata B</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
             </div>
           </a>
           
-          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/gunung-1.png');">
+          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/gunung-1.png');">
             <div class="down-content">
               <h4>Paket Wisata C</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
             </div>
           </a>
           
-          <a href="{{ route('detail_wisata') }}" class="item" style="background-image: url('assets/images/pantai-2.jpg');">
+          <a href="detail_wisata.html" class="item" style="background-image: url('assets/images/pantai-2.jpg');">
             <div class="down-content">
               <h4>Paket Wisata D</h4>
               <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
@@ -504,7 +478,7 @@
     </div>
   </section>
 
-    <!-- Scripts -->
+  <!-- Scripts -->
     <!-- jQuery -->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 
@@ -597,6 +571,9 @@
 
 
 
+
+
+
 const paketSelect = document.getElementById('paket_wisata');
 const lihatDetailBtn = document.getElementById('lihatDetailBtn');
 const detailModalLabel = document.getElementById('detailModalLabel');
@@ -616,7 +593,10 @@ lihatDetailBtn.addEventListener('click', function () {
 });
 
 
-//dropdown user
+
+
+
+
 const userMenuToggle = document.getElementById("userMenuToggle");
 const userDropdown = document.getElementById("userDropdown");
 

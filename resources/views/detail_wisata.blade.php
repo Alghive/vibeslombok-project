@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
+    <meta name="author" content="Template Mo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Education Meeting HTML5 Template</title>
+    <title>Education Template - Meeting Detail Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -23,7 +23,8 @@
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-</head>
+
+  </head>
 
 <body>
 
@@ -65,18 +66,49 @@
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li><a href="index.html">Home</a></li>
-                          <li><a href="meetings.html" class="active">Meetings</a></li>
-                          <li><a href="index.html">Apply Now</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)">Pages</a>
-                              <ul class="sub-menu">
-                                  <li><a href="meetings.html">Upcoming Meetings</a></li>
-                                  <li><a href="meeting-details.html">Meeting Details</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="index.html">Courses</a></li> 
-                          <li><a href="index.html">Contact Us</a></li> 
+                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Services</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Rent Car</a></li>
+                                <li><a href="">Tour Package</a></li>
+                            </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="#courses">About Us</a></li> 
+                        <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
+                        <li class="scroll-to-section"><a href="#contact">Blog</a></li> 
+
+                        <!-- User Icon -->
+                       <li class="user-icon">
+                        <a href="javascript:void(0)" id="userMenuToggle">
+                          <img src="assets/images/user.jpg" alt="User" class="user-avatar">
+                        </a>
+
+                        <!-- Dropdown User Menu -->
+                        <div class="user-dropdown" id="userDropdown">
+                          <div class="user-info">
+                            <img src="assets/images/user.jpg" alt="User" class="user-avatar-lg">
+                            <div>
+                              <h5>Rizky Haidar</h5>
+                              <p>rizkyhaidar04@gmail.com</p>
+                            </div>
+                          </div>
+
+                          <!-- Tambahan tombol edit profil -->
+                          <div class="edit-profile-btn" style="margin-bottom: 0px;">
+                            <a href="profile.html">
+                              <i class="fa fa-edit"></i> Edit Profile
+                            </a>
+                          </div>
+
+                          <ul>
+                            <li><a href="#"><i class="fa fa-user-cog"></i> History</a></li>
+                            <li><a href="#"><i class="fa fa-shield-alt"></i> Security</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+                          </ul>
+                        </div>
+
+                      </li>
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>
@@ -185,7 +217,7 @@
 
 
 
-   <!-- Scripts -->
+  <!-- Scripts -->
     <!-- jQuery -->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 
@@ -203,7 +235,7 @@
     <script src="{{ asset('assets/js/video.js') }}"></script>
     <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-
+    
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
@@ -249,6 +281,23 @@
         $(window).scroll(function () {
           checkSection();
         });
+
+        //dropdown user menu
+        const userMenuToggle = document.getElementById("userMenuToggle");
+        const userDropdown = document.getElementById("userDropdown");
+
+  userMenuToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    userDropdown.style.display =
+      userDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  // Klik di luar menu untuk menutup
+  document.addEventListener("click", function (e) {
+    if (!userMenuToggle.contains(e.target) && !userDropdown.contains(e.target)) {
+      userDropdown.style.display = "none";
+    }
+  });
     </script>
 </body>
 
