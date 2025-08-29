@@ -120,6 +120,7 @@
                         <li><a href="#" data-target="alamat">Alamat</a></li>
                         <li><a href="#" data-target="password">Ubah Password</a></li>
 
+
                         <li class="sidebar-heading">Transaksi</li>
                         <li><a href="#" data-target="riwayat">Riwayat Pemesanan</a></li>
                       </ul>
@@ -132,27 +133,64 @@
                       <!-- Profil -->
                       <div id="profil" class="content-section active">
                         <h4 class="mb-4">Profil Saya</h4>
+                        
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul class="mb-0">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        @if (session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
                               <!-- Foto Profil -->
                               <div class="profile-picture text-center mb-4">
-                                <img src="assets/images/user.jpg" alt="Foto Profil" class="profile-img">
-                                <div class="upload-btn mt-2">
-                                  <label for="upload-photo" class="btn btn-outline-secondary btn-sm">Ubah Foto</label>
-                                  <input type="file" id="upload-photo" accept="image/*" hidden>
+                                @if($user->profile_picture)
+                                    <img src="{{ asset('storage/' . $user->profile_picture) }}" alt="Foto Profil" class="profile-img" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                                @else
+                                    <img src="{{ asset('assets/images/user.jpg') }}" alt="Foto Profil" class="profile-img" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                                @endif
+                                
+                                <!-- Upload Form -->
+                                <div class="upload-form mt-3">
+                                  <form method="POST" action="{{ route('profile.upload-picture') }}" enctype="multipart/form-data" style="display: inline-block;">
+                                    @csrf
+                                    <div class="input-group input-group-sm" style="max-width: 300px;">
+                                      <input type="file" name="profile_picture" class="form-control form-control-sm" accept="image/*" required>
+                                      <button type="submit" class="btn btn-primary btn-sm">Upload</button>
+                                    </div>
+                                    <div class="form-text small text-muted mt-1">Max 2MB, Format: JPEG, PNG, JPG, GIF</div>
+                                  </form>
                                 </div>
                               </div>
 
-                              <form>
+                              <form method="POST" action="{{ route('profile.update') }}">
+                                @csrf
                                 <div class="form-group">
-                                  <label>Username</label>
-                                  <input type="text" class="form-control" value="rizkyhz04" readonly>
+                                  <label>ID User</label>
+                                  <input type="text" class="form-control" value="{{ $user->id }}" readonly>
                                 </div>
                                 <div class="form-group">
                                   <label>Nama</label>
-                                  <input type="text" class="form-control" placeholder="Masukkan Nama">
+                                  <input type="text" name="name" class="form-control" value="{{ $user->name }}" placeholder="Masukkan Nama">
                                 </div>
                                 <div class="form-group">
                                   <label>Email</label>
-                                  <input type="email" class="form-control" value="rizky@gmail.com" readonly>
+                                  <input type="email" name="email" class="form-control" value="{{ $user->email }}" readonly>
                                 </div>
                                 <div class="form-group">
                                   <label>Nomor Telepon</label>
@@ -181,18 +219,19 @@
 
                             <div id="password" class="content-section">
                               <h4 class="mb-4">Ubah Password</h4>
-                              <form>
+                              <form method="POST" action="{{ route('profile.change-password') }}">
+                                @csrf
                                 <div class="form-group">
                                   <label>Password Lama</label>
-                                  <input type="password" class="form-control" placeholder="Masukkan Password Lama" required>
+                                  <input type="password" name="current_password" class="form-control" placeholder="Masukkan Password Lama" required>
                                 </div>
                                 <div class="form-group">
                                   <label>Password Baru</label>
-                                  <input type="password" class="form-control" placeholder="Masukkan Password Baru" required>
+                                  <input type="password" name="password" class="form-control" placeholder="Masukkan Password Baru" required>
                                 </div>
                                 <div class="form-group">
                                   <label>Konfirmasi Password Baru</label>
-                                  <input type="password" class="form-control" placeholder="Ulangi Password Baru" required>
+                                  <input type="password" name="password_confirmation" class="form-control" placeholder="Ulangi Password Baru" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Simpan Perubahan</button>
                               </form>

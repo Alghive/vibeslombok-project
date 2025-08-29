@@ -8,6 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="Template Mo" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -75,53 +76,100 @@
               <p>Create your new account below.</p>
             </div>
 
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Full Name"
-              />
-            </div>
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Email address"
-              />
-            </div>
-            <div class="input-group mb-3">
-              <input
-                type="password"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Password"
-              />
-            </div>
-            <div class="input-group mb-3">
-              <input
-                type="password"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Confirm Password"
-              />
-            </div>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
-            <div class="input-group mb-4 d-flex justify-content-between">
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="agreeCheck"
-                />
-                <label for="agreeCheck" class="form-check-label text-secondary"
-                  ><small>I agree to the terms & conditions</small></label
-                >
-              </div>
-            </div>
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
 
-            <div class="input-group mb-3">
-              <button class="btn btn-lg btn-primary w-100 fs-6">
-                Register
-              </button>
-            </div>
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            <form method="POST" action="{{ route('register.post') }}">
+                @csrf
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control form-control-lg bg-light fs-6 @error('name') is-invalid @enderror"
+                    placeholder="Full Name"
+                    value="{{ old('name') }}"
+                    required
+                  />
+                  @error('name')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control form-control-lg bg-light fs-6 @error('email') is-invalid @enderror"
+                    placeholder="Email address"
+                    value="{{ old('email') }}"
+                    required
+                  />
+                  @error('email')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control form-control-lg bg-light fs-6 @error('password') is-invalid @enderror"
+                    placeholder="Password"
+                    required
+                  />
+                  @error('password')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="password"
+                    name="password_confirmation"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Confirm Password"
+                    required
+                  />
+                </div>
+
+                <div class="input-group mb-4 d-flex justify-content-between">
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="agreeCheck"
+                      required
+                    />
+                    <label for="agreeCheck" class="form-check-label text-secondary"
+                      ><small>I agree to the <a href="{{ route('terms') }}" target="_blank">terms & conditions</a> and <a href="{{ route('privacy') }}" target="_blank">privacy policy</a></small></label
+                    >
+                  </div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">
+                    Register
+                  </button>
+                </div>
+            </form>
+            
             <div class="input-group mb-3">
               <button class="btn btn-lg btn-light w-100 fs-6">
                 <img
@@ -133,7 +181,7 @@
             </div>
             <div class="row">
               <small
-                >Already have an account? <a href="login.html">Login</a></small
+                >Already have an account? <a href="{{ route('login') }}">Login</a></small
               >
             </div>
           </div>
@@ -159,5 +207,8 @@
     <script src="{{ asset('assets/js/video.js') }}"></script>
     <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    
+    <!-- Registration validation -->
+    <script src="{{ asset('assets/js/register-validation.js') }}"></script>
   </body>
 </html>

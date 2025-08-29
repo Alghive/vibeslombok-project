@@ -56,25 +56,58 @@
                      <h3 class="mb-1">Hello,Again</h3>
                      <p>We are happy to have you back.</p>
                 </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
-                </div>
-                <div class="input-group mb-1">
-                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
-                </div>
-                <div class="input-group mb-5 d-flex justify-content-between">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="formCheck">
-                        <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
+                
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
                     </div>
-                    <div class="forgot">
-                        <small><a href="#">Forgot Password?</a></small>
+                @endif
+
+                @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="input-group mb-3">
-                  <a href=""></a>
-                    <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
-                </div>
+                @endif
+
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
+                <form method="POST" action="{{ route('login.post') }}">
+                    @csrf
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control form-control-lg bg-light fs-6 @error('email') is-invalid @enderror" placeholder="Email address" value="{{ old('email') }}" required>
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="input-group mb-1">
+                        <input type="password" name="password" class="form-control form-control-lg bg-light fs-6 @error('password') is-invalid @enderror" placeholder="Password" required>
+                        @error('password')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="input-group mb-5 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" name="remember" class="form-check-input" id="formCheck" {{ old('remember') ? 'checked' : '' }}>
+                            <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
+                        </div>
+                        <div class="forgot">
+                            <small><a href="#">Forgot Password?</a></small>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+                    </div>
+                </form>
+                
                 <div class="input-group mb-3">
                     <button class="btn btn-lg btn-light w-100 fs-6"><img src="assets/images/google.png" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
                 </div>
