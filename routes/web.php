@@ -22,3 +22,6 @@ Route::get('/login', function () {
     return view('login'); // otomatis cari resources/views/login.blade.php
 })->name('login');
 
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
