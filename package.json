@@ -13,5 +13,11 @@
         "laravel-vite-plugin": "^2.0.0",
         "tailwindcss": "^4.0.0",
         "vite": "^7.0.4"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^7.0.0",
+        "@popperjs/core": "^2.11.8",
+        "admin-lte": "^4.0.0-rc4",
+        "bootstrap": "^5.3.8"
     }
 }

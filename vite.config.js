@@ -5,9 +5,16 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+                'node_modules/admin-lte/dist/css/adminlte.min.css',
+                'node_modules/admin-lte/dist/js/adminlte.min.js',
+                'node_modules/bootstrap/dist/css/bootstrap.min.css',
+                'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+            ],
             refresh: true,
         }),
         tailwindcss(),
     ],
-});
+});     

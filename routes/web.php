@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/admin', function () {
+    return view('admin.pages.dashboard'); // ini akan pakai admin layout
+});
+
 Route::get('/detail-wisata', function () {
     return view('detail_wisata'); // otomatis cari resources/views/detail_wisata.blade.php
 })->name('detail_wisata');
