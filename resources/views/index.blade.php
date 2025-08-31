@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!-- Add this line at the very top of the file -->
+    @php use Illuminate\Support\Facades\Auth; @endphp
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -79,19 +81,27 @@
                             <!-- User Icon -->
                             <li class="user-icon"> 
                                 <a href="javascript:void(0)" id="userMenuToggle">
-                                    <img src="assets/images/user.jpg" alt="User" class="user-avatar">
+                                    @if(Auth::check() && Auth::user()->profile_picture)
+                                        <img src="{{ asset('storage/' . Auth::user()->profile_picture) }}" alt="User" class="user-avatar">
+                                    @else
+                                        <img src="assets/images/user.jpg" alt="User" class="user-avatar">
+                                    @endif
                                 </a>
-
+                                
                                 <!-- Dropdown User Menu -->
                                 <div class="user-dropdown" id="userDropdown">
                                     <div class="user-info">
-                                        <img src="assets/images/user.jpg" alt="User" class="user-avatar-lg">
+                                        @if(Auth::check() && Auth::user()->profile_picture)
+                                            <img src="{{ asset('storage/' . Auth::user()->profile_picture) }}" alt="User" class="user-avatar-lg">
+                                        @else
+                                            <img src="assets/images/user.jpg" alt="User" class="user-avatar-lg">
+                                        @endif
                                         <div>
-                                            <h5>Rizky Haidar</h5>
-                                            <p>rizkyhaidar04@gmail.com</p>
+                                            <h5>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</h5>
+                                            <p>{{ Auth::check() ? Auth::user()->email : 'Not logged in' }}</p>
                                         </div>
                                     </div>
-
+                                
                                     <!-- Tambahan tombol edit profil -->
                                     <div class="edit-profile-btn" style="margin-bottom: 0px;">
                                         <a href="{{ route('profile') }}">
@@ -121,7 +131,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
-    <section class="section main-banner" id="top" data-section="section1">
+    <section class="section main-banner" id="#top" data-section="section1">
         <video autoplay muted loop id="bg-video">
             <source src="assets/images/course-video.mp4" type="video/mp4" />
         </video>

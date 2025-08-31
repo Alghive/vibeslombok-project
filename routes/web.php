@@ -38,14 +38,18 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile/change-password', [App\Http\Controllers\ProfileControllers::class, 'changePassword'])->name('profile.change-password');
     Route::post('/profile/delete-account', [App\Http\Controllers\ProfileControllers::class, 'deleteAccount'])->name('profile.delete-account');
     Route::post('/profile/upload-picture', [App\Http\Controllers\ProfileControllers::class, 'uploadProfilePicture'])->name('profile.upload-picture');
-    Route::get('/profile/data', [App\Http\Controllers\ProfileControllers::class, 'getProfileData'])->name('profile.data');
+
+    // Add this new route for address update
+    Route::post('/profile/update-address', [App\Http\Controllers\ProfileControllers::class, 'updateAddress'])->name('profile.update-address');
 });
+Route::post('/profile/delete-account', [App\Http\Controllers\ProfileControllers::class, 'deleteAccount'])->name('profile.delete-account');
+Route::get('/profile/data', [App\Http\Controllers\ProfileControllers::class, 'getProfileData'])->name('profile.data');
 
 // API route for checking authentication
 Route::get('/check-auth', [App\Http\Controllers\LoginControllers::class, 'checkAuth'])->name('check.auth');
 
 // Test route for debugging
-Route::get('/test-profile/{id}', function($id) {
+Route::get('/test-profile/{id}', function ($id) {
     $user = \App\Models\User::find($id);
     if ($user) {
         return response()->json([
@@ -60,12 +64,12 @@ Route::get('/test-profile/{id}', function($id) {
 });
 
 // Test upload route
-Route::post('/test-upload', function(\Illuminate\Http\Request $request) {
+Route::post('/test-upload', function (\Illuminate\Http\Request $request) {
     if ($request->hasFile('profile_picture')) {
         $file = $request->file('profile_picture');
         $filename = time() . '_test.' . $file->getClientOriginalExtension();
         $path = $file->storeAs('profile-pictures', $filename, 'public');
-        
+
         return response()->json([
             'success' => true,
             'path' => $path,
@@ -76,10 +80,27 @@ Route::post('/test-upload', function(\Illuminate\Http\Request $request) {
 });
 
 // Test page route
-Route::get('/test-upload-page', function() {
+Route::get('/test-upload-page', function () {
     return view('test-upload');
 });
 
 Route::get('/register', function () {
     return view('register');
 })->name('register');
+
+// Password Reset Routes
+Route::get('/forgot-password', [App\Http\Controllers\LoginControllers::class, 'showForgotPasswordForm'])
+    ->middleware('guest')
+    ->name('password.request');
+
+Route::post('/forgot-password', [App\Http\Controllers\LoginControllers::class, 'sendResetLinkEmail'])
+    ->middleware('guest')
+    ->name('password.email');
+
+Route::get('/reset-password/{token}', [App\Http\Controllers\LoginControllers::class, 'showResetPasswordForm'])
+    ->middleware('guest')
+    ->name('password.reset');
+
+Route::post('/reset-password', [App\Http\Controllers\LoginControllers::class, 'resetPassword'])
+    ->middleware('guest')
+    ->name('password.update');
