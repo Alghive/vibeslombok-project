@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
 
-    <title>Education Template - Meeting Detail Page</title>
+    <title>Reset Password - Vibes Lombok</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -42,10 +42,10 @@
         <div
           class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe">
           <div class="featured-image mb-3">
-            <img src="assets/images/1.png" alt="" class="img-fluid" style="width: 250px"/>
+            <img src="{{ asset('assets/images/1.png') }}" alt="" class="img-fluid" style="width: 250px"/>
           </div>
-          <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600; margin-bottom: 25px;">Be Verified</p>
-          <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace;">Join experienced with Lombok Vibes.</small>
+          <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600; margin-bottom: 25px;">New Password</p>
+          <small class="text-white text-wrap text-center" style="width: 17rem; font-family: 'Courier New', Courier, monospace;">Create a new secure password for your account.</small>
         </div>
 
         <!-- ------------------Right Box----------------- -->
@@ -53,8 +53,8 @@
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
                 <div class="header-text mb-4">
-                     <h3 class="mb-1">Hello,Again</h3>
-                     <p>We are happy to have you back.</p>
+                     <h3 class="mb-1">Reset Password</h3>
+                     <p>Enter your new password below.</p>
                 </div>
                 
                 @if ($errors->any())
@@ -67,52 +67,37 @@
                     </div>
                 @endif
 
-                @if (session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
-                @if (session('error'))
-                    <div class="alert alert-danger">
-                        {{ session('error') }}
-                    </div>
-                @endif
-
-                <form method="POST" action="{{ route('login.post') }}">
+                <form method="POST" action="{{ route('password.update') }}">
                     @csrf
+                    
+                    <!-- Password Reset Token -->
+                    <input type="hidden" name="token" value="{{ $request->route('token') }}">
+                    
                     <div class="input-group mb-3">
-                        <input type="email" name="email" class="form-control form-control-lg bg-light fs-6 @error('email') is-invalid @enderror" placeholder="Email address" value="{{ old('email') }}" required>
+                        <input type="email" name="email" class="form-control form-control-lg bg-light fs-6 @error('email') is-invalid @enderror" placeholder="Email address" value="{{ old('email', $request->email) }}" required readonly>
                         @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="input-group mb-1">
-                        <input type="password" name="password" class="form-control form-control-lg bg-light fs-6 @error('password') is-invalid @enderror" placeholder="Password" required>
+                    
+                    <div class="input-group mb-3">
+                        <input type="password" name="password" class="form-control form-control-lg bg-light fs-6 @error('password') is-invalid @enderror" placeholder="New Password" required>
                         @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="input-group mb-5 d-flex justify-content-between">
-                        <div class="form-check">
-                            <input type="checkbox" name="remember" class="form-check-input" id="formCheck" {{ old('remember') ? 'checked' : '' }}>
-                            <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
-                        </div>
-                        <div class="forgot">
-                            <small><a href="{{ route('password.request') }}">Forgot Password?</a></small>
-                        </div>
+                    
+                    <div class="input-group mb-4">
+                        <input type="password" name="password_confirmation" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm New Password" required>
                     </div>
+                    
                     <div class="input-group mb-3">
-                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Reset Password</button>
                     </div>
                 </form>
                 
-                <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-light w-100 fs-6"><img src="assets/images/google.png" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
-                </div>
-                <div class="row">
-                    <small>Don't have account? <a href="{{ route('register') }}">Sign Up</a></small>
+                <div class="row text-center">
+                    <small><a href="{{ route('login') }}">Back to Login</a></small>
                 </div>
           </div>
        </div> 
@@ -130,12 +115,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Additional JS Files -->
-    <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
-    <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
-    <script src="{{ asset('assets/js/lightbox.js') }}"></script>
-    <script src="{{ asset('assets/js/tabs.js') }}"></script>
-    <script src="{{ asset('assets/js/video.js') }}"></script>
-    <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
   </body>
 </html>
