@@ -174,22 +174,23 @@
       <!-- Card Mobil 1 -->
       <div class="col-md-6 col-lg-4 car-item">
         <div class="car-card">
-          <a href="#"><img src="assets/images/hiace.png" class="img-fluid car-img"></a>
+          <div class="availability-badge available">Available</div>
+          <img src="assets/images/hiace.png" class="img-fluid car-img">
           <div class="car-content text-center">
             <h4 class="car-title"><a href="#">Toyota Hiace</a></h4>
             <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
             </div>
             <div class="rent-price"><span>IDR 350K/</span>day</div>
             <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">11</span></li>
               <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
             </ul>
             <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
           </div>
@@ -199,72 +200,23 @@
       <!-- Card Mobil 1 -->
       <div class="col-md-6 col-lg-4 car-item">
         <div class="car-card">
-          <a href="#"><img src="assets/images/avanza.png" class="img-fluid car-img"></a>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <a href="#"><img src="assets/images/ertiga.png" class="img-fluid car-img"></a>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Suzuki Ertiga</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <a href="#"><img src="assets/images/hiace.png" class="img-fluid car-img"></a>
+          <div class="availability-badge available">Available</div>
+          <img src="assets/images/hiace.png" class="img-fluid car-img">
           <div class="car-content text-center">
             <h4 class="car-title"><a href="#">Toyota Hiace</a></h4>
             <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
             </div>
             <div class="rent-price"><span>IDR 350K/</span>day</div>
             <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">11</span></li>
               <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
             </ul>
             <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
           </div>
@@ -274,97 +226,23 @@
       <!-- Card Mobil 1 -->
       <div class="col-md-6 col-lg-4 car-item">
         <div class="car-card">
-          <a href="#"><img src="assets/images/ertiga.png" class="img-fluid car-img"></a>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Suzuki Ertiga</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <a href="#"><img src="assets/images/avanza.png" class="img-fluid car-img"></a>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <a href="#"><img src="assets/images/avanza.png" class="img-fluid car-img"></a>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <a href="#"><img src="assets/images/xpander.png" class="img-fluid car-img"></a>
+          <div class="availability-badge available">Available</div>
+          <img src="assets/images/xpander.png" class="img-fluid car-img">
           <div class="car-content text-center">
             <h4 class="car-title"><a href="#">Mitsubishi Xpander</a></h4>
             <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
             </div>
             <div class="rent-price"><span>IDR 350K/</span>day</div>
             <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">4</span></li>
               <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
             </ul>
             <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
           </div>
@@ -374,52 +252,49 @@
       <!-- Card Mobil 1 -->
       <div class="col-md-6 col-lg-4 car-item">
         <div class="car-card">
-          <a href="#"><img src="assets/images/avanza.png" class="img-fluid car-img"></a>
+          <div class="availability-badge available">Available</div>
+          <img src="assets/images/hiace.png" class="img-fluid car-img">
+          <div class="car-content text-center">
+            <h4 class="car-title"><a href="#">Toyota Hiace</a></h4>
+            <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
+            </div>
+            <div class="rent-price"><span>IDR 350K/</span>day</div>
+            <ul class="specs list-unstyled mt-3">
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">11</span></li>
+              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Mobil 1 -->
+      <div class="col-md-6 col-lg-4 car-item">
+        <div class="car-card">
+          <div class="availability-badge not-available">Available</div>
+          <img src="assets/images/avanza.png" class="img-fluid car-img">
           <div class="car-content text-center">
             <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
             <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
             </div>
             <div class="rent-price"><span>IDR 350K/</span>day</div>
             <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">4</span></li>
               <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
-          </div>
-        </div>
-      </div>
-
-      
-      
-
-      
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <a href="#"><img src="assets/images/ertiga.png" class="img-fluid car-img"></a>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Suzuki Ertiga</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
             </ul>
             <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
           </div>
@@ -429,22 +304,101 @@
       <!-- Card Mobil 1 -->
       <div class="col-md-6 col-lg-4 car-item">
         <div class="car-card">
-          <a href="#"><img src="assets/images/ertiga.png" class="img-fluid car-img"></a>
+          <div class="availability-badge not-available">Available</div>
+          <img src="assets/images/avanza.png" class="img-fluid car-img">
           <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Suzuki Ertiga</a></h4>
+            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
             <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
               <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
             </div>
             <div class="rent-price"><span>IDR 350K/</span>day</div>
             <ul class="specs list-unstyled mt-3">
-              <li><span>Doors</span> <span class="spec">4</span></li>
-              <li><span>Seats</span> <span class="spec">5</span></li>
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">4</span></li>
               <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Minimum age</span> <span class="spec">18 years</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Mobil 1 -->
+      <div class="col-md-6 col-lg-4 car-item">
+        <div class="car-card">
+          <div class="availability-badge not-available">Available</div>
+          <img src="assets/images/avanza.png" class="img-fluid car-img">
+          <div class="car-content text-center">
+            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
+            <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
+            </div>
+            <div class="rent-price"><span>IDR 350K/</span>day</div>
+            <ul class="specs list-unstyled mt-3">
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">4</span></li>
+              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Mobil 1 -->
+      <div class="col-md-6 col-lg-4 car-item">
+        <div class="car-card">
+          <div class="availability-badge available">Available</div>
+          <img src="assets/images/xpander.png" class="img-fluid car-img">
+          <div class="car-content text-center">
+            <h4 class="car-title"><a href="#">Mitsubishi Xpander</a></h4>
+            <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
+            </div>
+            <div class="rent-price"><span>IDR 350K/</span>day</div>
+            <ul class="specs list-unstyled mt-3">
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">4</span></li>
+              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Mobil 1 -->
+      <div class="col-md-6 col-lg-4 car-item">
+        <div class="car-card">
+          <div class="availability-badge available">Available</div>
+          <img src="assets/images/xpander.png" class="img-fluid car-img">
+          <div class="car-content text-center">
+            <h4 class="car-title"><a href="#">Mitsubishi Xpander</a></h4>
+            <div class="rating mb-2">
+              {{-- <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i> --}}
+            </div>
+            <div class="rent-price"><span>IDR 350K/</span>day</div>
+            <ul class="specs list-unstyled mt-3">
+              <li><span>Year</span> <span class="spec">2022</span></li>
+              <li><span>Seats</span> <span class="spec">4</span></li>
+              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
+              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
             </ul>
             <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Rent Now</a>
           </div>

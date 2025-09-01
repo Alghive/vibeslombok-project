@@ -1955,6 +1955,7 @@ upcoming meetings page
 
 /* Card Rental Car */
 .car-card {
+  position: relative;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -2000,6 +2001,28 @@ upcoming meetings page
 }
 .btn-primary:hover {
   background-color: #0b5ed7;
+}
+
+/* Availability Badge */
+.availability-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.available {
+  background-color: #28a745; /* hijau */
+}
+
+.not-available {
+  background-color: #dc3545; /* merah */
 }
 
 /* Card tour package */
