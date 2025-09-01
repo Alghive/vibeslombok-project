@@ -70,8 +70,8 @@
                             <li class="has-sub">
                                 <a href="javascript:void(0)">Services</a>
                                 <ul class="sub-menu">
-                                    <li><a href="">Rent Car</a></li>
-                                    <li><a href="">Tour Package</a></li>
+                                    <li><a href="{{ route('rent-car') }}">Rent Car</a></li>
+                                    <li><a href="{{ route('tour-package') }}">Tour Package</a></li>
                                 </ul>
                             </li>
                             <li class="scroll-to-section"><a href="#courses">About Us</a></li>
@@ -429,71 +429,124 @@
     </section>
 
 
-    <section class="our-courses" id="courses">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h2>Welcome to Car Rental Lombok</h2>
-                        <p>
-                            Providing service with a swift response, seamless experience, and a diverse fleet of
-                            vehicles available for self-drive or with a professional driver. Your satisfaction is our
-                            top priority.
-                        </p>
-                    </div>
+    <section class="our-facts" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="container-xxl">
+            <div class="container">
+              <div class="row g-5">
+                <div
+                  class="col-lg-6 wow fadeInUp"
+                  data-wow-delay="0.1s"
+                  style="min-height: 400px"
+                >
+                  <!-- <div class="position-relative h-100">
+                    <img
+                      class="img-fluid position-absolute w-100 h-100"
+                      src="assets/images/pantai-2.jpg"
+                      alt=""
+                      style="object-fit: cover"
+                    />
+                  </div> -->
+                  <div class="position-relative h-100 d-flex justify-content-center align-items-center">
+                  <img
+                    class="img-fluid"
+                    src="assets/images/mobil-3.png"
+                    alt="Mobil"
+                    style="object-fit: contain; max-height: 100%;"
+                  />
                 </div>
-                <div class="col-lg-12">
-                    <div class="container-xxl">
-                        <div class="container">
-                            <div class="row g-4">
-                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="service-item text-center pt-3">
-                                        <div class="p-4">
-                                            <i class="fa fa-3x fa-clock-o text-primary mb-4"></i>
-                                            <h5 class="mb-3">On 24 Hours</h5>
-                                            <p>24 Hours Service</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="service-item text-center pt-3">
-                                        <div class="p-4">
-                                            <i class="fa fa-3x fa-history text-primary mb-4"></i>
-                                            <h5 class="mb-3">On Time</h5>
-                                            <p>Pickup and Delivery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="service-item text-center pt-3">
-                                        <div class="p-4">
-                                            <i class="fa fa-3x fa-users text-primary mb-4"></i>
-                                            <h5 class="mb-3">Friendly Staff</h5>
-                                            <p>Proessional Satff and Driver</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="service-item text-center pt-3">
-                                        <div class="p-4">
-                                            <i class="fa fa-3x fa-car text-primary mb-4"></i>
-                                            <h5 class="mb-3">Well-Kept Car</h5>
-                                            <p>Guaranteed clean and tidy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp text-white" data-wow-delay="0.3s">
+                  <h1 class="mb-4">About Us</h1>
+                  <p class="mb-4 text-white">
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                    diam amet diam et eos. Clita erat ipsum et lorem et sit.
+                  </p>
+                  <p class="mb-4 text-white">
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                    lorem sit clita duo justo magna dolore erat amet
+                  </p>
+                  <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6 d-flex align-items-center">
+                      <i class="fa-solid fa-clock fa-lg text-white me-3"></i>
+                      <span>24 Hours Service</span>
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center">
+                      <i class="fa-solid fa-truck fa-lg text-white me-3"></i>
+                      <span>On Time Pickup & Delivery</span>
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center">
+                      <i class="fa-solid fa-user-tie fa-lg text-white me-3"></i>
+                      <span>Professional Staff & Driver</span>
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center">
+                      <i class="fa-solid fa-broom fa-lg text-white me-3"></i>
+                      <span>Guaranteed Clean & Tidy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Service</h2>
+            <p>
+              Providing service with a swift response, seamless experience, and a diverse fleet of vehicles available for self-drive or with a professional driver. Your satisfaction is our top priority.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="container-xxl">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                      <a href="{{ route('tour-package') }}" class="text-decoration-none text-dark">
+                        <div class="service-item text-center pt-3">
+                          <div class="p-4">
+                            <i class="fa fa-3x fa-map-marker text-primary mb-4"></i>
+                            <h5 class="mb-3">Tour Package</h5>
+                            <p>Pickup and Delivery</p>
+                          </div>
                         </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                      <a href="{{ route('rent-car') }}" class="text-decoration-none text-dark">
+                        <div class="service-item text-center pt-3">
+                          <div class="p-4">
+                            <i class="fa fa-3x fa-car text-primary mb-4"></i>
+                            <h5 class="mb-3">Rent Car</h5>
+                            <p>Guaranteed clean and tidy</p>
+                          </div>
+                        </div>
+                      </a>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  
 
-    <section class="contact-us" id="contact">
-        <div class="container">
-            <div class="row">
-                <!-- <div class="col-lg-9 align-self-center">
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 align-self-center">
           <div class="row">
             <div class="col-lg-12">
               <form id="contact" action="" method="post">
@@ -518,8 +571,7 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..."
-                          required=""></textarea>
+                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
@@ -531,8 +583,8 @@
               </form>
             </div>
           </div>
-        </div> -->
-                <!-- <div class="col-lg-3">
+        </div> 
+        <div class="col-lg-3">
           <div class="right-info">
             <ul>
               <li>
@@ -553,19 +605,18 @@
               </li>
             </ul>
           </div>
-        </div> -->
-            </div>
-        </div>
-        <div class="footer">
-            <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-                <br>
-                Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-                <br>
-                Distibuted By: <a href="https://themewagon.com" target="_blank"
-                    title="Build Better UI, Faster">ThemeWagon</a>
-            </p>
-        </div>
-    </section>
+        </div> 
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved. 
+          <br>
+          Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
+          <br>
+          Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
+        </p>
+    </div>
+  </section>
 
     <!-- Scripts -->
     <!-- jQuery -->

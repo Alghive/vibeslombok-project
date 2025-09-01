@@ -22,6 +22,14 @@ Route::get('/guest', function () {
     return view('guest'); // otomatis cari resources/views/guest.blade.php
 })->name('guest');
 
+Route::get('/rent-car', function () {
+    return view('rent-car'); // otomatis cari resources/views/rent-car.blade.php
+})->name('rent-car');
+
+Route::get('/tour-package', function () {
+    return view('tour-package'); // otomatis cari resources/views/tour-package.blade.php
+})->name('tour-package');
+
 // Authentication routes
 Route::get('/login', [App\Http\Controllers\LoginControllers::class, 'showLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\LoginControllers::class, 'login'])->name('login.post');

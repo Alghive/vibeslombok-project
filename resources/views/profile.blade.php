@@ -72,8 +72,8 @@
                           <li class="has-sub">
                               <a href="javascript:void(0)">Services</a>
                               <ul class="sub-menu">
-                                  <li><a href="">Rent Car</a></li>
-                                  <li><a href="">Tour Package</a></li>
+                                <li><a href="{{ route('rent-car') }}">Rent Car</a></li>
+                                <li><a href="{{ route('tour-package') }}">Tour Package</a></li>
                               </ul>
                           </li>
                           <li class="scroll-to-section"><a href="{{ url('/#courses') }}">About Us</a></li> 
