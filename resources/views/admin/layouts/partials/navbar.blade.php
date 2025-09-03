@@ -1,4 +1,13 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+    <nav class="app-header navbar navbar-expand bg-body">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">AdminLTE 4</a>
+        </div>
+    </nav>
+
+
+
+{{-- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -23,4 +32,4 @@
             </div>
         </li>
     </ul>
-</nav>
+</nav> --}}
