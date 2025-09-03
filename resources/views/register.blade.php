@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animated-background.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/logo-styles.css') }}">
     
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -31,25 +33,69 @@
   </head>
 
   <body>
+    <!-- Animated Background Elements -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    
+    <div class="waves">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    
+    <div class="geometric-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
     <!-- ------------------Main Container----------------- -->
     <div
       class="container d-flex justify-content-center align-items-center min-vh-100 py-5"
     >
       <!-- ------------------Register Container----------------- -->
-      <div class="row border rounded-5 p-3 bg-white shadow box-area">
+      <div class="row border rounded-5 p-3 bg-white shadow box-area auth-container glass-effect">
         <!-- ------------------Left Box----------------- -->
         <div
           class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-          style="background: #103cbe"
+          style="background: #103cbe; min-height: 500px; padding: 30px;"
         >
-          <div class="featured-image mb-3">
-            <!-- Gambar sama dengan login -->
-            <img
-              src="assets/images/1.png"
-              alt=""
-              class="img-fluid"
-              style="width: 250px"
-            />
+          <div class="lombok-logo mb-4">
+            <div class="logo-graphic">
+              <div class="sunrise-element">
+                <div class="sun"></div>
+                <div class="waves">
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                  <div class="wave"></div>
+                </div>
+                <div class="sun-rays">
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                  <div class="ray"></div>
+                </div>
+              </div>
+            </div>
+            <div class="logo-text">
+              <div class="company-name">Lombok</div>
+              <div class="company-name">Car Rentals</div>
+              <div class="tagline">By Vibes Lombok</div>
+            </div>
           </div>
           <p
             class="text-white fs-2"
@@ -59,18 +105,20 @@
               margin-bottom: 25px;
             "
           >
-            Create Account
+            Lombok Car Rentals
           </p>
           <small
             class="text-white text-wrap text-center"
             style="width: 17rem; font-family: 'Courier New', Courier, monospace"
-            >Join us and explore Lombok Vibes.</small
+            >By Vibes Lombok</small
           >
         </div>
 
         <!-- ------------------Right Box----------------- -->
         <div class="col-md-6 right-box">
           <div class="row align-items-center">
+
+            
             <div class="header-text mb-4">
               <h3 class="mb-1">Welcome!</h3>
               <p>Create your new account below.</p>
@@ -170,15 +218,7 @@
                 </div>
             </form>
             
-            <div class="input-group mb-3">
-              <button class="btn btn-lg btn-light w-100 fs-6">
-                <img
-                  src="assets/images/google.png"
-                  style="width: 20px"
-                  class="me-2"
-                /><small>Sign Up with Google</small>
-              </button>
-            </div>
+
             <div class="row">
               <small
                 >Already have an account? <a href="{{ route('login') }}">Login</a></small
@@ -207,6 +247,7 @@
     <script src="{{ asset('assets/js/video.js') }}"></script>
     <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/animated-background.js') }}"></script>
     
     <!-- Registration validation -->
     <script src="{{ asset('assets/js/register-validation.js') }}"></script>

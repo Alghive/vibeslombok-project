@@ -11,6 +11,8 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Log;
+
 
 class LoginControllers extends Controller
 {
@@ -27,9 +29,12 @@ class LoginControllers extends Controller
      */
     public function login(Request $request)
     {
+        // Log the incoming request data for debugging
+        Log::info('Login attempt', ['email' => $request->email]);
+        
         // Validate the request
         $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
+            'email' => 'required|string|email:rfc,dns',
             'password' => 'required|string|min:6',
         ], [
             'email.required' => 'Email harus diisi',
@@ -39,6 +44,7 @@ class LoginControllers extends Controller
         ]);
 
         if ($validator->fails()) {
+            Log::warning('Login validation failed', ['errors' => $validator->errors()]);
             return redirect()->back()
                 ->withErrors($validator)
                 ->withInput($request->except('password'));
@@ -49,12 +55,14 @@ class LoginControllers extends Controller
         
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
+            Log::info('User logged in successfully', ['user_id' => Auth::id()]);
             
             // Redirect based on user role or to dashboard
             return redirect()->intended('/')->with('success', 'Login berhasil!');
         }
 
         // If authentication fails, return with error
+        Log::warning('Failed login attempt', ['email' => $request->email]);
         return redirect()->back()
             ->withErrors(['email' => 'Email atau password salah'])
             ->withInput($request->except('password'));
@@ -172,4 +180,6 @@ class LoginControllers extends Controller
                     ? redirect()->route('login')->with('success', __($status))
                     : back()->withErrors(['email' => [__($status)]]);
     }
+
+
 }
