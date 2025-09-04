@@ -22,6 +22,7 @@
     
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   </head>
 
@@ -75,7 +76,14 @@
                         </li>
                         <li class="scroll-to-section"><a href="#about">About Us</a></li> 
                         <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
-                        <li class="scroll-to-section"><a href="#contact">Blog</a></li> 
+                        <li class="scroll-to-section"><a href="#contact">Blog</a></li>
+                        <!-- Cart Icon -->
+                        <li class="nav-item cart-icon">
+                          <a href="javascript:void(0)" class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="badge">3</span>
+                          </a>
+                        </li> 
 
                         <!-- User Icon -->
                        <li class="user-icon">
@@ -120,6 +128,120 @@
       </div>
   </header>
   <!-- ***** Header Area End ***** -->
+
+  <!-- Modal Cart -->
+      <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content cart-modal">
+            <!-- Header -->
+            <div class="modal-header custom-header">
+              <h5 class="modal-title fw-bold" id="cartModalLabel">
+                <i class="fa fa-shopping-cart me-2 text-primary"></i> Keranjang Saya
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+              <!-- Item keranjang contoh 1 -->
+              <div class="cart-item d-flex align-items-center border rounded-3 p-3 mb-3 shadow-sm">
+                <input type="checkbox" class="form-check-input me-3">
+                <img src="assets/images/rush-1.png" alt="Toyota Rush" class="rounded me-3"
+                    style="width:90px; height:65px; object-fit:cover;">
+                <div class="flex-grow-1">
+                  <h6 class="mb-1 fw-semibold">Toyota Rush</h6>
+                  <small class="text-muted">Automatic • 2018 • 4 Seats</small>
+                  <div class="d-flex align-items-center mt-2">
+                    <span class="fw-bold text-primary">IDR 350K</span><small class="ms-1">/day</small>
+                  </div>
+                </div>
+                <!-- Counter -->
+                <div class="d-flex flex-column align-items-center ms-3">
+                  <small class="text-muted mb-1">Day</small>
+                  <div class="d-flex align-items-center">
+                    <button class="btn btn-sm btn-outline-success rounded-pill">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" value="1" class="form-control form-control-sm text-center mx-2"
+                          style="width:50px;">
+                    <button class="btn btn-sm btn-outline-success rounded-pill">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item keranjang contoh 2 -->
+              <div class="cart-item d-flex align-items-center border rounded-3 p-3 mb-3 shadow-sm">
+                <input type="checkbox" class="form-check-input me-3">
+                <img src="assets/images/rush-2.png" alt="Toyota Avanza" class="rounded me-3"
+                    style="width:90px; height:65px; object-fit:cover;">
+                <div class="flex-grow-1">
+                  <h6 class="mb-1 fw-semibold">Toyota Avanza</h6>
+                  <small class="text-muted">Manual • 2019 • 7 Seats</small>
+                  <div class="d-flex align-items-center mt-2">
+                    <span class="fw-bold text-primary">IDR 300K</span><small class="ms-1">/day</small>
+                  </div>
+                </div>
+                <div class="d-flex flex-column align-items-center ms-3">
+                  <small class="text-muted mb-1">Day</small>
+                  <div class="d-flex align-items-center">
+                    <button class="btn btn-sm btn-outline-success rounded-pill">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" value="1" class="form-control form-control-sm text-center mx-2"
+                          style="width:50px;">
+                    <button class="btn btn-sm btn-outline-success rounded-pill">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Item keranjang contoh 2 -->
+              <div class="cart-item d-flex align-items-center border rounded-3 p-3 mb-3 shadow-sm">
+                <input type="checkbox" class="form-check-input me-3">
+                <img src="assets/images/rush-2.png" alt="Toyota Avanza" class="rounded me-3"
+                    style="width:90px; height:65px; object-fit:cover;">
+                <div class="flex-grow-1">
+                  <h6 class="mb-1 fw-semibold">Toyota Avanza</h6>
+                  <small class="text-muted">Manual • 2019 • 7 Seats</small>
+                  <div class="d-flex align-items-center mt-2">
+                    <span class="fw-bold text-primary">IDR 300K</span><small class="ms-1">/day</small>
+                  </div>
+                </div>
+                <div class="d-flex flex-column align-items-center ms-3">
+                  <small class="text-muted mb-1">Day</small>
+                  <div class="d-flex align-items-center">
+                    <button class="btn btn-sm btn-outline-success rounded-pill">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" value="1" class="form-control form-control-sm text-center mx-2"
+                          style="width:50px;">
+                    <button class="btn btn-sm btn-outline-success rounded-pill">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+
+              <!-- Tambahkan item lain sebanyak yang diperlukan -->
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer custom-footer">
+              <div class="fw-bold">
+                Total: <span class="text-primary">IDR 950K</span>
+              </div>
+              <button class="btn btn-primary rounded-pill px-4 position-relative">
+                Checkout
+                <span class="checkout-count badge bg-light text-primary ms-2">3</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Chart End -->
 
   <section class="heading-page header-text" id="top" style="background-image: url('assets/images/tour-2.jpg'); ">
     <div class="container">
@@ -551,6 +673,41 @@ const userDropdown = document.getElementById("userDropdown");
       userDropdown.style.display = "none";
     }
   });
+
+
+  // Fungsi +/-
+document.addEventListener("DOMContentLoaded", function () {
+  // cari semua cart item
+  document.querySelectorAll(".cart-item").forEach(function (item) {
+    let minusBtn = item.querySelector(".btn-outline-success .fa-minus")?.parentElement;
+    let plusBtn = item.querySelector(".btn-outline-success .fa-plus")?.parentElement;
+    let input = item.querySelector("input[type='text']");
+
+    if (minusBtn && plusBtn && input) {
+      // event tombol minus
+      minusBtn.addEventListener("click", function () {
+        let current = parseInt(input.value) || 0;
+        if (current > 1) {
+          input.value = current - 1;
+        }
+      });
+
+      // event tombol plus
+      plusBtn.addEventListener("click", function () {
+        let current = parseInt(input.value) || 0;
+        input.value = current + 1;
+      });
+
+      // validasi manual input (supaya tidak kosong / nol)
+      input.addEventListener("input", function () {
+        let val = parseInt(input.value);
+        if (isNaN(val) || val < 1) {
+          input.value = 1;
+        }
+      });
+    }
+  });
+});
 
     </script>
 </body>
