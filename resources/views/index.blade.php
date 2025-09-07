@@ -77,7 +77,7 @@
                             </li>
                             <li class="scroll-to-section"><a href="#courses">About Us</a></li>
                             <li class="scroll-to-section"><a href="#contact">Contact</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Blog</a></li>
+                            <li><a href="{{ route('blog') }}">Blog</a></li>
                             <!-- Cart Icon -->
                             <li class="nav-item cart-icon">
                             <a href="javascript:void(0)" class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">

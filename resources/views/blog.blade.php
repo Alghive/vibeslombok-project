@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
-    
+
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -61,7 +61,7 @@
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="index.html" class="logo">
-                          Lombok Vibes
+                          Edu Meeting
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
@@ -74,7 +74,7 @@
                                 <li><a href="{{ route('tour-package') }}">Tour Package</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="#about">About Us</a></li> 
+                        <li class="scroll-to-section"><a href="#courses">About Us</a></li> 
                         <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
                         <li><a href="{{ route('blog') }}">Blog</a></li>
                         <!-- Cart Icon -->
@@ -103,7 +103,7 @@
 
                           <!-- Tambahan tombol edit profil -->
                           <div class="edit-profile-btn" style="margin-bottom: 0px;">
-                            <a href="{{ route('profile') }}">
+                            <a href="profile.html">
                               <i class="fa fa-edit"></i> Edit Profile
                             </a>
                           </div>
@@ -116,8 +116,7 @@
                         </div>
 
                       </li>
-                      </ul>
-      
+                      </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>
                       </a>
@@ -129,240 +128,7 @@
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/bg-car4.jpg'); ">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>Rental Car</h6>
-          <h2>Explore Your Car</h2>
-        </div>
-      </div>
-    </div>
-
-  <!-- Search & Filter Card (pindahkan ke sini) -->
-  <div class="search-filter-card">
-    <div class="container">
-      <div class="card shadow-lg filter-card">
-        <div class="row align-items-center g-3">
-          <div class="col-md-4">
-            <label class="form-label">Search Car</label>
-            <input type="text" class="form-control" placeholder="Search by car name...">
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Transmission</label>
-            <select class="form-select">
-              <option>All</option>
-              <option>Automatic</option>
-              <option>Manual</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Seats</label>
-            <select class="form-select">
-              <option>All</option>
-              <option>4 Seats</option>
-              <option>5 Seats</option>
-              <option>7 Seats</option>
-            </select>
-          </div>
-          <div class="col-md-2 text-center">
-            <button class="btn btn-primary w-100 mt-4">Search</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-  
-
-  <section class="meetings-page" id="meetings" style="padding-top:150px;">
-  <div class="container">
-    <div class="row g-4" id="car-list">
-      <!-- Semua card mobil (tetap ditulis semua di sini, tapi nanti diatur tampilannya via JS) -->
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <!-- Badge status -->
-          <div class="availability-badge available">Available</div>
-          <!-- Carousel utama -->
-          <div id="carCarousel" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/images/avanza-1.png" class="d-block w-100" alt="Mobil 1">
-                <!-- <div class="car-img" style="background-image: url('assets/images/avanza-1.png');"></div> -->
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/avanza-2.png" class="d-block w-100" alt="Mobil 2">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/avanza-3.png" class="d-block w-100" alt="Mobil 3">
-              </div>
-            </div>
-            <!-- tombol prev/next -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-          <!-- Thumbnail control -->
-          <div class="carousel-thumbnails d-flex justify-content-center mt-2">
-              <img src="assets/images/avanza-1.png" class="thumb active" data-bs-target="#carCarousel" data-bs-slide-to="0">
-              <img src="assets/images/avanza-2.png" class="thumb" data-bs-target="#carCarousel" data-bs-slide-to="1">
-              <img src="assets/images/avanza-3.png" class="thumb" data-bs-target="#carCarousel" data-bs-slide-to="2">
-          </div>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Year</span> <span class="spec">2024</span></li>
-              <li><span>Seats</span> <span class="spec">4</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
-            </ul>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a href="contact.html" class="btn btn-primary rounded-pill px-4">
-                Rent Now
-              </a>
-              <button class="btn btn-cart rounded-circle" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <!-- Badge status -->
-          <div class="availability-badge not-available">Not Available</div>
-          <!-- Carousel utama -->
-          <div id="carCarousel" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/images/rush-1.png" class="d-block w-100" alt="Mobil 1">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/rush-2.png" class="d-block w-100" alt="Mobil 2">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/rush-33.png" class="d-block w-100" alt="Mobil 3">
-              </div>
-            </div>
-            <!-- tombol prev/next -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-          <!-- Thumbnail control -->
-          <div class="carousel-thumbnails d-flex justify-content-center mt-2">
-              <img src="assets/images/rush-1.png" class="thumb active" data-bs-target="#carCarousel" data-bs-slide-to="0">
-              <img src="assets/images/rush-2.png" class="thumb" data-bs-target="#carCarousel" data-bs-slide-to="1">
-              <img src="assets/images/rush-33.png" class="thumb" data-bs-target="#carCarousel" data-bs-slide-to="2">
-          </div>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Toyota Rush</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Year</span> <span class="spec">2018</span></li>
-              <li><span>Seats</span> <span class="spec">4</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
-            </ul>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a href="contact.html" class="btn btn-primary rounded-pill px-4">
-                Rent Now
-              </a>
-              <button class="btn btn-cart rounded-circle" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Card Mobil 1 -->
-      <div class="col-md-6 col-lg-4 car-item">
-        <div class="car-card">
-          <!-- Badge status -->
-          <div class="availability-badge available">Available</div>
-          <!-- Carousel utama -->
-          <div id="carCarousel" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/images/avanza-1.png" class="d-block w-100" alt="Mobil 1">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/avanza-2.png" class="d-block w-100" alt="Mobil 2">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/avanza-3.png" class="d-block w-100" alt="Mobil 3">
-              </div>
-            </div>
-            <!-- tombol prev/next -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-          <!-- Thumbnail control -->
-          <div class="carousel-thumbnails d-flex justify-content-center mt-2">
-              <img src="assets/images/avanza-1.png" class="thumb active" data-bs-target="#carCarousel" data-bs-slide-to="0">
-              <img src="assets/images/avanza-2.png" class="thumb" data-bs-target="#carCarousel" data-bs-slide-to="1">
-              <img src="assets/images/avanza-3.png" class="thumb" data-bs-target="#carCarousel" data-bs-slide-to="2">
-          </div>
-          <div class="car-content text-center">
-            <h4 class="car-title"><a href="#">Toyota Avanza</a></h4>
-            <div class="rating mb-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-            </div>
-            <div class="rent-price"><span>IDR 350K/</span>day</div>
-            <ul class="specs list-unstyled mt-3">
-              <li><span>Year</span> <span class="spec">2024</span></li>
-              <li><span>Seats</span> <span class="spec">4</span></li>
-              <li><span>Transmission</span> <span class="spec">Automatic</span></li>
-              <li><span>Fuel Type</span> <span class="spec">Bensin</span></li>
-            </ul>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a href="contact.html" class="btn btn-primary rounded-pill px-4">
-                Rent Now
-              </a>
-              <button class="btn btn-cart rounded-circle" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Cart -->
+  <!-- Modal Cart -->
       <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content cart-modal">
@@ -474,12 +240,262 @@
           </div>
         </div>
       </div>
+      <!-- Modal Chart End -->
 
+  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/tour-2.jpg'); ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Explore Your Destination</h2>
+          <h6>BLOG</h6>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="meetings-page" id="meetings" style="padding-top:150px;">
+  <div class="container">
+    <div class="row g-4" id="car-list">
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
 
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
 
 
       
+
+      
+
+      
+
       
       <!-- Duplicate card lainnya... -->
     </div>
@@ -570,10 +586,10 @@
 
 
 
-        // Pagination
-        document.addEventListener("DOMContentLoaded", function () {
+  // Pagination
+  document.addEventListener("DOMContentLoaded", function () {
   const itemsPerPage = 9; 
-  const items = document.querySelectorAll(".car-item");
+  const items = document.querySelectorAll(".blog-item");
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const pagination = document.getElementById("pagination");
   let currentPage = 1;
@@ -651,37 +667,6 @@ const userDropdown = document.getElementById("userDropdown");
   });
 
 
-  // carousel card
-  document.addEventListener("DOMContentLoaded", function () {
-  // cari semua carousel yang pakai id "carCarousel"
-  document.querySelectorAll("#carCarousel").forEach((carousel, index) => {
-    let newId = "carCarousel" + (index + 1); // bikin id unik
-    carousel.id = newId;
-
-    // update semua tombol & thumbnail target di card ini
-    carousel.closest(".car-card")
-      .querySelectorAll("[data-bs-target='#carCarousel']")
-      .forEach(el => el.setAttribute("data-bs-target", "#" + newId));
-
-    // event listener sinkron thumbnail
-    carousel.addEventListener("slid.bs.carousel", function (e) {
-      let thumbs = carousel.closest(".car-card").querySelectorAll(".thumb");
-      thumbs.forEach(t => t.classList.remove("active"));
-      thumbs[e.to]?.classList.add("active");
-    });
-
-    // klik thumbnail -> slide ke index
-    let thumbs = carousel.closest(".car-card").querySelectorAll(".thumb");
-    thumbs.forEach((thumb, i) => {
-      thumb.addEventListener("click", function () {
-        thumbs.forEach(t => t.classList.remove("active"));
-        this.classList.add("active");
-      });
-    });
-  });
-});
-
-
   // Fungsi +/-
 document.addEventListener("DOMContentLoaded", function () {
   // cari semua cart item
@@ -715,6 +700,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
     </script>
 </body>
 

@@ -19,11 +19,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
-    
+
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 
   </head>
 
@@ -243,11 +242,11 @@
       </div>
       <!-- Modal Chart End -->
 
-  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/pantai-4.jpg');">
+  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/pantai-1.png');">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h6>Paket Wisata Pulau Lombok</h6>
+          <h6>BLOG</h6>
           <h2>Lorem ipsum dolor sit amet.</h2>
         </div>
       </div>
@@ -262,63 +261,56 @@
           <div class="col-lg-12">
             <div class="meeting-single-item">
               <div class="down-content">
-                <a href="meeting-details.html"><h4>Private Trip Gili Islands Full-Day Island Hopping: Trawangan, Meno & Air</h4></a>
-                <p>Keterangan Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, modi?</p>
-                
-                <!-- deskripsi content start -->
-                <p class="description">
-                  <strong>Detailed Itinerary</strong><br><br>
 
-                  <img src="assets/images/pantai-1.png" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>08:00 AM - 08:30 AM: Hotel Pick-up in Lombok</strong><br>
-                  • Your friendly English-speaking driver will pick you up from your hotel anywhere in Lombok (Senggigi, Kuta, Mataram, etc.) in a comfortable, air-conditioned private car.<br>
-                  • Enjoy a scenic drive through Lombok’s landscapes towards the harbor.<br><br>
+                <!-- Isi Detail Blog -->
+                <div class="blog-detail">
 
-                  <img src="assets/images/pantai-2.jpg" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>08:30 AM - 09:30 AM: Transfer to Bangsal Harbor</strong><br>
-                  • Journey to Bangsal Harbor, the main departure point for the Gili Islands. Your driver will ensure a smooth and comfortable transfer.<br><br>
+                  <!-- Judul -->
+                  <h2 class="blog-title mb-3 text-center">Experience Lombok Your Way with Vibes Lombok Car Rental</h2>
 
-                  <img src="assets/images/airterjun-1.png" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>09:30 AM - 10:00 AM: Preparation & Boat Departure</strong><br>
-                  • Upon arrival at Bangsal Harbor, you’ll be greeted by your professional guide.<br>
-                  • Your guide will assist you with tickets and lead you to your private glass-bottom boat, ready for departure.<br>
-                  • Get a briefing about the day’s activities and safety measures.<br><br>
-
-                  <img src="assets/images/gunung-1.png" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>10:00 AM - 10:30 AM: Scenic Boat Ride to Gili Meno (First Snorkeling Stop)</strong><br>
-                  • Embark on your private glass-bottom boat. Enjoy the clear waters and views of Lombok as you head towards Gili Meno.<br>
-                  • <em>Snorkeling Spot 1 (Coral Garden / Turtle Point):</em> Your guide will lead you to a prime snorkeling spot near Gili Meno, often where you can find turtles. Dive into the crystal-clear waters to explore vibrant coral gardens and encounter various tropical fish. Your GoPro will be ready to capture these underwater moments.
-                </p>
-                <!-- deskripsi content end -->
-
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="hours">
-                      <h5>Hours</h5>
-                      <p>Monday - Friday: 07:00 AM - 13:00 PM<br>Saturday- Sunday: 09:00 AM - 15:00 PM</p>
-                    </div>
+                  <!-- Meta Info -->
+                  <div class="blog-meta text-center mb-4 text-muted">
+                    <span><i class="fa fa-calendar me-2"></i> June 10, 2025</span>
+                    <span class="ms-3"><i class="fa fa-user me-2"></i> Admin</span>
                   </div>
-                  <div class="col-lg-4">
-                    <div class="location">
-                      <h5>Location</h5>
-                      <p>Recreio dos Bandeirantes, 
-                      <br>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="book now">
-                      <h5>Book Now</h5>
-                      <p>010-020-0340<br>090-080-0760</p>
-                    </div>
+
+                  <!-- Thumbnail pakai background-image -->
+                  <div class="blog-thumbnail mb-4" style="background-image: url('assets/images/pantai-3.jpg');"></div>
+
+                  <!-- Konten -->
+                  <div class="blog-content">
+                    <p>
+                      Planning your dream getaway to the stunning island of Lombok? To truly experience everything this magical paradise has to offer, from its pristine beaches to its majestic volcanoes, having reliable transportation is key.
+                    </p>
+
+                    <h4>Why Choose Vibes Lombok Car Rental?</h4>
+                    <p>
+                      At Vibes Lombok Car Rental, we pride ourselves on offering an exceptional and hassle-free experience. We understand that convenience, safety, and reliability are paramount for your vacation.
+                    </p>
+
+                    <h4>Professionalism at Its Best</h4>
+                    <p>
+                      As a professional car rental company in Lombok, we are committed to providing you with the highest standard of service. From the moment you inquire until you return your vehicle, expect clear communication, transparent prices, and smooth transactions.
+                    </p>
+
+                    <h4>Comprehensive Insurance for Your Safety</h4>
+                    <p>
+                      Your safety is our top priority. Unlike other rentals, all our rental vehicles include comprehensive insurance. This gives you peace of mind throughout your journey, allowing you to focus on exploring without worry.
+                    </p>
+
+                    <h4>Driver or Self-Drive: Your Choice</h4>
+                    <p>
+                      Whether you prefer the convenience of having a local expert navigating Lombok or the freedom of exploring at your own pace, Vibes Lombok Car Rental offers both options.
+                    </p>
+
+                    <ul>
+                      <li><strong>Car Rental with Driver:</strong> Let our experienced drivers guide you safely through Lombok’s top destinations.</li>
+                      <li><strong>Self-Drive:</strong> Enjoy the adventure of discovering hidden gems at your own pace with our well-maintained cars.</li>
+                    </ul>
                   </div>
                 </div>
 
               </div>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="main-button-red">
-              <a href="index.html">Booking Now</a>
             </div>
           </div>
         </div>
@@ -336,6 +328,7 @@
     </p>
   </div>
 </section>
+
 
 
 
@@ -357,7 +350,6 @@
     <script src="{{ asset('assets/js/video.js') }}"></script>
     <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
