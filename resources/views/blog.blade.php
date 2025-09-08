@@ -9,7 +9,7 @@
     <meta name="author" content="Template Mo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Education Template - Meeting Detail Page</title>
+    <title>Education - List of Meetings</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -19,11 +19,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
-    
+
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 
   </head>
 
@@ -243,96 +242,278 @@
       </div>
       <!-- Modal Chart End -->
 
-  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/pantai-4.jpg');">
+  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/tour-2.jpg'); ">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h6>Paket Wisata Pulau Lombok</h6>
-          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h2>Explore Your Destination</h2>
+          <h6>BLOG</h6>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="meetings-page" id="meetings">
+  <section class="meetings-page" id="meetings" style="padding-top:150px;">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="meeting-single-item">
-              <div class="down-content">
-                <a href="meeting-details.html"><h4>Private Trip Gili Islands Full-Day Island Hopping: Trawangan, Meno & Air</h4></a>
-                <p>Keterangan Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, modi?</p>
-                
-                <!-- deskripsi content start -->
-                <p class="description">
-                  <strong>Detailed Itinerary</strong><br><br>
+    <div class="row g-4" id="car-list">
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
 
-                  <img src="assets/images/pantai-1.png" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>08:00 AM - 08:30 AM: Hotel Pick-up in Lombok</strong><br>
-                  • Your friendly English-speaking driver will pick you up from your hotel anywhere in Lombok (Senggigi, Kuta, Mataram, etc.) in a comfortable, air-conditioned private car.<br>
-                  • Enjoy a scenic drive through Lombok’s landscapes towards the harbor.<br><br>
-
-                  <img src="assets/images/pantai-2.jpg" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>08:30 AM - 09:30 AM: Transfer to Bangsal Harbor</strong><br>
-                  • Journey to Bangsal Harbor, the main departure point for the Gili Islands. Your driver will ensure a smooth and comfortable transfer.<br><br>
-
-                  <img src="assets/images/airterjun-1.png" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>09:30 AM - 10:00 AM: Preparation & Boat Departure</strong><br>
-                  • Upon arrival at Bangsal Harbor, you’ll be greeted by your professional guide.<br>
-                  • Your guide will assist you with tickets and lead you to your private glass-bottom boat, ready for departure.<br>
-                  • Get a briefing about the day’s activities and safety measures.<br><br>
-
-                  <img src="assets/images/gunung-1.png" alt="Hotel Pick-up" style="width:400px; margin-bottom:8px; border-radius: 7px;"><br>
-                  <strong>10:00 AM - 10:30 AM: Scenic Boat Ride to Gili Meno (First Snorkeling Stop)</strong><br>
-                  • Embark on your private glass-bottom boat. Enjoy the clear waters and views of Lombok as you head towards Gili Meno.<br>
-                  • <em>Snorkeling Spot 1 (Coral Garden / Turtle Point):</em> Your guide will lead you to a prime snorkeling spot near Gili Meno, often where you can find turtles. Dive into the crystal-clear waters to explore vibrant coral gardens and encounter various tropical fish. Your GoPro will be ready to capture these underwater moments.
-                </p>
-                <!-- deskripsi content end -->
-
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="hours">
-                      <h5>Hours</h5>
-                      <p>Monday - Friday: 07:00 AM - 13:00 PM<br>Saturday- Sunday: 09:00 AM - 15:00 PM</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="location">
-                      <h5>Location</h5>
-                      <p>Recreio dos Bandeirantes, 
-                      <br>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="book now">
-                      <h5>Book Now</h5>
-                      <p>010-020-0340<br>090-080-0760</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
           </div>
-          <div class="col-lg-12">
-            <div class="main-button-red">
-              <a href="index.html">Booking Now</a>
-            </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
           </div>
         </div>
       </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+      <!-- Item Blog 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <!-- Link overlay (buat card bisa diklik) -->
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/airterjun-1.png');">
+            <span class="blog-tag">Travel</span>
+          </div>
+
+          <!-- Konten -->
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">10 Destinasi Wisata Terbaik di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Temukan destinasi terbaik di Lombok yang wajib kamu kunjungi mulai dari pantai hingga wisata budaya.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 5 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/gunung-1.png');">
+            <span class="blog-tag">Tips</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Tips Liburan Hemat di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Cari tahu cara berlibur hemat tapi tetap menyenangkan di Lombok dengan panduan dari kami.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 2 Sep 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Blog 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 blog-item">
+        <div class="blog-card shadow-sm rounded-4 overflow-hidden position-relative">
+          <a href="{{ route('detail_blog') }}" class="stretched-link"></a>
+
+          <div class="blog-img" style="background-image: url('assets/images/pantai-3.jpg');">
+            <span class="blog-tag">Culture</span>
+          </div>
+
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 text-dark">Mengenal Budaya Sasak di Lombok</h5>
+            <p class="text-muted small mb-3">
+              Kenali budaya asli Lombok, suku Sasak dengan adat, seni, dan tradisi unik yang penuh makna.
+            </p>
+            <small class="text-muted"><i class="fa fa-calendar me-1"></i> 28 Agu 2025</small>
+          </div>
+        </div>
+      </div>
+
+
+      
+
+      
+
+      
+
+      
+      <!-- Duplicate card lainnya... -->
     </div>
+
+    <!-- Pagination -->
+    <nav>
+  <ul class="pagination justify-content-center mt-5" id="pagination"></ul>
+</nav>
   </div>
 
-  <div class="footer">
+  <!-- Footer -->
+  <div class="footer text-center mt-5">
     <p>
       Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved. 
       <br>
-      Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
+      Design: <a href="https://templatemo.com" target="_parent">TemplateMo</a>
       <br>
-      Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
+      Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
     </p>
   </div>
 </section>
@@ -357,7 +538,6 @@
     <script src="{{ asset('assets/js/video.js') }}"></script>
     <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
@@ -404,9 +584,74 @@
           checkSection();
         });
 
-        //dropdown user menu
-        const userMenuToggle = document.getElementById("userMenuToggle");
-        const userDropdown = document.getElementById("userDropdown");
+
+
+  // Pagination
+  document.addEventListener("DOMContentLoaded", function () {
+  const itemsPerPage = 9; 
+  const items = document.querySelectorAll(".blog-item");
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const pagination = document.getElementById("pagination");
+  let currentPage = 1;
+
+  function showPage(page) {
+    items.forEach((item, index) => {
+      item.style.display =
+        (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage)
+          ? "block" : "none";
+    });
+
+    // update active class
+    document.querySelectorAll("#pagination li.page-item").forEach(li => li.classList.remove("active"));
+    document.querySelector(`#pagination li[data-page="${page}"]`)?.classList.add("active");
+
+    // update prev/next disabled
+    document.getElementById("prev").parentElement.classList.toggle("disabled", page === 1);
+    document.getElementById("next").parentElement.classList.toggle("disabled", page === totalPages);
+
+    currentPage = page;
+  }
+
+  // generate tombol
+  pagination.innerHTML = `
+    <li class="page-item"><a class="page-link" href="#" id="prev">&laquo;</a></li>
+  `;
+
+  for (let i = 1; i <= totalPages; i++) {
+    pagination.innerHTML += `
+      <li class="page-item" data-page="${i}"><a class="page-link" href="#">${i}</a></li>
+    `;
+  }
+
+  pagination.innerHTML += `
+    <li class="page-item"><a class="page-link" href="#" id="next">&raquo;</a></li>
+  `;
+
+  // event click
+  pagination.querySelectorAll(".page-item[data-page]").forEach(li => {
+    li.addEventListener("click", e => {
+      e.preventDefault();
+      showPage(Number(li.dataset.page));
+    });
+  });
+
+  document.getElementById("prev").addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage > 1) showPage(currentPage - 1);
+  });
+
+  document.getElementById("next").addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  });
+
+  showPage(1);
+});
+
+
+// user menu
+const userMenuToggle = document.getElementById("userMenuToggle");
+const userDropdown = document.getElementById("userDropdown");
 
   userMenuToggle.addEventListener("click", function (e) {
     e.preventDefault();
@@ -455,6 +700,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
     </script>
 </body>
 

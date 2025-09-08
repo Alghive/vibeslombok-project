@@ -30,6 +30,13 @@ Route::get('/tour-package', function () {
     return view('tour-package'); // otomatis cari resources/views/tour-package.blade.php
 })->name('tour-package');
 
+Route::get('/blog', function () {
+    return view('blog'); // otomatis cari resources/views/blog.blade.php
+})->name('blog');
+
+Route::get('/detail_blog', function () {
+    return view('detail_blog'); // otomatis cari resources/views/detail_blog.blade.php
+})->name('detail_blog');
 // Authentication routes
 Route::get('/login', [App\Http\Controllers\LoginControllers::class, 'showLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\LoginControllers::class, 'login'])->name('login.post');
