@@ -1,135 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.master')
 
-<head>
-    <!-- Add this line at the very top of the file -->
-    @php use Illuminate\Support\Facades\Auth; @endphp
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <title>Education Meeting HTML5 Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
-
-    <!-- CDN tetap boleh langsung -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-</head>
-
-
-<body>
-
-    <!-- Sub Header -->
-    <div class="sub-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-sm-8">
-                    <div class="left-content">
-                        <p>This is an educational <em>HTML CSS</em> template by TemplateMo website.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-4">
-                    <div class="right-icons">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            Vibes Lombok
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="has-sub">
-                                <a href="javascript:void(0)">Services</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{{ route('rent-car') }}">Rent Car</a></li>
-                                    <li><a href="{{ route('tour-package') }}">Tour Package</a></li>
-                                </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#courses">About Us</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Contact</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Blog</a></li>
-
-                            <!-- User Icon -->
-                            <li class="user-icon"> 
-                                <a href="javascript:void(0)" id="userMenuToggle">
-                                    @if(Auth::check() && Auth::user()->profile_picture)
-                                        <img src="{{ asset('storage/' . Auth::user()->profile_picture) }}" alt="User" class="user-avatar">
-                                    @else
-                                        <img src="assets/images/user.jpg" alt="User" class="user-avatar">
-                                    @endif
-                                </a>
-                                
-                                <!-- Dropdown User Menu -->
-                                <div class="user-dropdown" id="userDropdown">
-                                    <div class="user-info">
-                                        @if(Auth::check() && Auth::user()->profile_picture)
-                                            <img src="{{ asset('storage/' . Auth::user()->profile_picture) }}" alt="User" class="user-avatar-lg">
-                                        @else
-                                            <img src="assets/images/user.jpg" alt="User" class="user-avatar-lg">
-                                        @endif
-                                        <div>
-                                            <h5>{{ Auth::check() ? Auth::user()->name : 'Guest' }}</h5>
-                                            <p>{{ Auth::check() ? Auth::user()->email : 'Not logged in' }}</p>
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Tambahan tombol edit profil -->
-                                    <div class="edit-profile-btn" style="margin-bottom: 0px;">
-                                        <a href="{{ route('profile') }}">
-                                            <i class="fa fa-edit"></i> Edit Profile
-                                        </a>
-                                    </div>
-
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-user-cog"></i> History</a></li>
-                                        <li><a href="#"><i class="fa fa-shield-alt"></i> Security</a></li>
-                                        <li><a href="{{ route('guest') }}"><i class="fa fa-sign-out-alt"></i> Logout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
+@section('title', 'Home')
+@section('content')
     <!-- ***** Main Banner Area Start ***** -->
     <section class="section main-banner" id="#top" data-section="section1">
         <video autoplay muted loop id="bg-video">
@@ -147,8 +19,8 @@
                                 of vehicle options from city cars to family cars. The company also provides various tour
                                 packages to explore the beauty of Lombok.</p>
                             <!-- <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">View More!</a></div>
-              </div> -->
+                          <div class="scroll-to-section"><a href="#contact">View More!</a></div>
+                      </div> -->
                         </div>
                     </div>
                 </div>
@@ -251,17 +123,15 @@
                                             <label class="form-label d-block">Tipe Layanan</label>
                                             <div class="d-flex gap-4">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="tipe_layanan" id="self_drive" value="self_drive"
-                                                        required>
+                                                    <input class="form-check-input" type="radio" name="tipe_layanan"
+                                                        id="self_drive" value="self_drive" required>
                                                     <label class="form-check-label" for="self_drive">
                                                         Self-drive
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="tipe_layanan" id="with_driver" value="with_driver"
-                                                        required>
+                                                    <input class="form-check-input" type="radio" name="tipe_layanan"
+                                                        id="with_driver" value="with_driver" required>
                                                     <label class="form-check-label" for="with_driver">
                                                         With Driver
                                                     </label>
@@ -285,8 +155,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <label for="paket_wisata" class="form-label">Pilih Paket Wisata</label>
-                                            <select id="paket_wisata" name="paket_wisata" class="form-select"
-                                                required>
+                                            <select id="paket_wisata" name="paket_wisata" class="form-select" required>
                                                 <option value="">-- Pilih Paket --</option>
                                                 <option value="paket_a">Paket A</option>
                                                 <option value="paket_b">Paket B</option>
@@ -430,326 +299,183 @@
 
 
     <section class="our-facts" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="container-xxl">
-            <div class="container">
-              <div class="row g-5">
-                <div
-                  class="col-lg-6 wow fadeInUp"
-                  data-wow-delay="0.1s"
-                  style="min-height: 400px"
-                >
-                  <!-- <div class="position-relative h-100">
-                    <img
-                      class="img-fluid position-absolute w-100 h-100"
-                      src="assets/images/pantai-2.jpg"
-                      alt=""
-                      style="object-fit: cover"
-                    />
-                  </div> -->
-                  <div class="position-relative h-100 d-flex justify-content-center align-items-center">
-                  <img
-                    class="img-fluid"
-                    src="assets/images/mobil-3.png"
-                    alt="Mobil"
-                    style="object-fit: contain; max-height: 100%;"
-                  />
-                </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp text-white" data-wow-delay="0.3s">
-                  <h1 class="mb-4">About Us</h1>
-                  <p class="mb-4 text-white">
-                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                    diam amet diam et eos. Clita erat ipsum et lorem et sit.
-                  </p>
-                  <p class="mb-4 text-white">
-                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                    lorem sit clita duo justo magna dolore erat amet
-                  </p>
-                  <div class="row gy-2 gx-4 mb-4">
-                    <div class="col-sm-6 d-flex align-items-center">
-                      <i class="fa-solid fa-clock fa-lg text-white me-3"></i>
-                      <span>24 Hours Service</span>
-                    </div>
-                    <div class="col-sm-6 d-flex align-items-center">
-                      <i class="fa-solid fa-truck fa-lg text-white me-3"></i>
-                      <span>On Time Pickup & Delivery</span>
-                    </div>
-                    <div class="col-sm-6 d-flex align-items-center">
-                      <i class="fa-solid fa-user-tie fa-lg text-white me-3"></i>
-                      <span>Professional Staff & Driver</span>
-                    </div>
-                    <div class="col-sm-6 d-flex align-items-center">
-                      <i class="fa-solid fa-broom fa-lg text-white me-3"></i>
-                      <span>Guaranteed Clean & Tidy</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="our-courses" id="courses">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Service</h2>
-            <p>
-              Providing service with a swift response, seamless experience, and a diverse fleet of vehicles available for self-drive or with a professional driver. Your satisfaction is our top priority.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="container-xxl">
-            <div class="container">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                      <a href="{{ route('tour-package') }}" class="text-decoration-none text-dark">
-                        <div class="service-item text-center pt-3">
-                          <div class="p-4">
-                            <i class="fa fa-3x fa-map-marker text-primary mb-4"></i>
-                            <h5 class="mb-3">Tour Package</h5>
-                            <p>Pickup and Delivery</p>
-                          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="container-xxl">
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px">
+                                    <!-- <div class="position-relative h-100">
+                            <img
+                              class="img-fluid position-absolute w-100 h-100"
+                              src="assets/images/pantai-2.jpg"
+                              alt=""
+                              style="object-fit: cover"
+                            />
+                          </div> -->
+                                    <div class="position-relative h-100 d-flex justify-content-center align-items-center">
+                                        <img class="img-fluid" src="assets/images/mobil-3.png" alt="Mobil"
+                                            style="object-fit: contain; max-height: 100%;" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 wow fadeInUp text-white" data-wow-delay="0.3s">
+                                    <h1 class="mb-4">About Us</h1>
+                                    <p class="mb-4 text-white">
+                                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                                        diam amet diam et eos. Clita erat ipsum et lorem et sit.
+                                    </p>
+                                    <p class="mb-4 text-white">
+                                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                                        diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                                        lorem sit clita duo justo magna dolore erat amet
+                                    </p>
+                                    <div class="row gy-2 gx-4 mb-4">
+                                        <div class="col-sm-6 d-flex align-items-center">
+                                            <i class="fa-solid fa-clock fa-lg text-white me-3"></i>
+                                            <span>24 Hours Service</span>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center">
+                                            <i class="fa-solid fa-truck fa-lg text-white me-3"></i>
+                                            <span>On Time Pickup & Delivery</span>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center">
+                                            <i class="fa-solid fa-user-tie fa-lg text-white me-3"></i>
+                                            <span>Professional Staff & Driver</span>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-center">
+                                            <i class="fa-solid fa-broom fa-lg text-white me-3"></i>
+                                            <span>Guaranteed Clean & Tidy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </a>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                      <a href="{{ route('rent-car') }}" class="text-decoration-none text-dark">
-                        <div class="service-item text-center pt-3">
-                          <div class="p-4">
-                            <i class="fa fa-3x fa-car text-primary mb-4"></i>
-                            <h5 class="mb-3">Rent Car</h5>
-                            <p>Guaranteed clean and tidy</p>
-                          </div>
-                        </div>
-                      </a>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
+    </section>
 
-  <section class="contact-us" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9 align-self-center">
-          <div class="row">
-            <div class="col-lg-12">
-              <form id="contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Let's get in touch</h2>
-                  </div>
-                  <div class="col-lg-4">
-                    <fieldset>
-                      <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4">
-                    <fieldset>
-                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
-                  </fieldset>
-                  </div>
-                  <div class="col-lg-4">
-                    <fieldset>
-                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                    </fieldset>
-                  </div>
+
+    <section class="our-courses" id="courses">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Service</h2>
+                        <p>
+                            Providing service with a swift response, seamless experience, and a diverse fleet of
+                            vehicles available for self-drive or with a professional driver. Your satisfaction is our
+                            top priority.
+                        </p>
+                    </div>
                 </div>
-              </form>
+                <div class="col-lg-12">
+                    <div class="container-xxl">
+                        <div class="container">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                                    <a href="{{ route('tour-package') }}" class="text-decoration-none text-dark">
+                                        <div class="service-item text-center pt-3">
+                                            <div class="p-4">
+                                                <i class="fa fa-3x fa-map-marker text-primary mb-4"></i>
+                                                <h5 class="mb-3">Tour Package</h5>
+                                                <p>Pickup and Delivery</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <a href="{{ route('rent-car') }}" class="text-decoration-none text-dark">
+                                        <div class="service-item text-center pt-3">
+                                            <div class="p-4">
+                                                <i class="fa fa-3x fa-car text-primary mb-4"></i>
+                                                <h5 class="mb-3">Rent Car</h5>
+                                                <p>Guaranteed clean and tidy</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div> 
-        <div class="col-lg-3">
-          <div class="right-info">
-            <ul>
-              <li>
-                <h6>Phone Number</h6>
-                <span>010-020-0340</span>
-              </li>
-              <li>
-                <h6>Email Address</h6>
-                <span>info@meeting.edu</span>
-              </li>
-              <li>
-                <h6>Street Address</h6>
-                <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
-              </li>
-              <li>
-                <h6>Website URL</h6>
-                <span>www.meeting.edu</span>
-              </li>
-            </ul>
-          </div>
-        </div> 
-      </div>
-    </div>
-    <div class="footer">
-      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved. 
-          <br>
-          Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-          <br>
-          Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-        </p>
-    </div>
-  </section>
-
-    <!-- Scripts -->
-    <!-- jQuery -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-    <!-- Bootstrap Bundle dengan Popper (via CDN, tetap boleh dipakai kalau mau) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Additional JS Files -->
-    <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
-    <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
-    <script src="{{ asset('assets/js/lightbox.js') }}"></script>
-    <script src="{{ asset('assets/js/tabs.js') }}"></script>
-    <script src="{{ asset('assets/js/video.js') }}"></script>
-    <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
-
-    <script>
-        //according to loftblog tut
-        $('.nav li:first').addClass('active');
-
-        var showSection = function showSection(section, isAnimate) {
-            var
-                direction = section.replace(/#/, ''),
-                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-                reqSectionPos = reqSection.offset().top - 0;
-
-            if (isAnimate) {
-                $('body, html').animate({
-                        scrollTop: reqSectionPos
-                    },
-                    800);
-            } else {
-                $('body, html').scrollTop(reqSectionPos);
-            }
-
-        };
-
-        var checkSection = function checkSection() {
-            $('.section').each(function() {
-                var
-                    $this = $(this),
-                    topEdge = $this.offset().top - 80,
-                    bottomEdge = topEdge + $this.height(),
-                    wScroll = $(window).scrollTop();
-                if (topEdge < wScroll && bottomEdge > wScroll) {
-                    var
-                        currentId = $this.data('section'),
-                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                    reqLink.closest('li').addClass('active').
-                    siblings().removeClass('active');
-                }
-            });
-        };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function(e) {
-            e.preventDefault();
-            showSection($(this).attr('href'), true);
-        });
-
-        $(window).scroll(function() {
-            checkSection();
-        });
+        </div>
+    </section>
 
 
-        document.querySelectorAll('#bookingTabs .nav-link').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const target = this.getAttribute('data-bs-target');
+    <section class="contact-us" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 align-self-center">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form id="contact" action="" method="post">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2>Let's get in touch</h2>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <input name="name" type="text" id="name"
+                                                placeholder="YOURNAME...*" required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*"
+                                                placeholder="YOUR EMAIL..." required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <input name="subject" type="text" id="subject"
+                                                placeholder="SUBJECT...*" required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..."
+                                                required=""></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="button">SEND MESSAGE
+                                                NOW</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="right-info">
+                        <ul>
+                            <li>
+                                <h6>Phone Number</h6>
+                                <span>010-020-0340</span>
+                            </li>
+                            <li>
+                                <h6>Email Address</h6>
+                                <span>info@meeting.edu</span>
+                            </li>
+                            <li>
+                                <h6>Street Address</h6>
+                                <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
+                            </li>
+                            <li>
+                                <h6>Website URL</h6>
+                                <span>www.meeting.edu</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                // switch form
-                document.querySelectorAll('#formTabsContent .tab-pane')
-                    .forEach(p => p.classList.remove('show', 'active'));
-                const formTarget = document.querySelector(`#form-${target}`);
-                formTarget.classList.add('active');
-                setTimeout(() => formTarget.classList.add('show'), 10);
-
-                // switch info
-                document.querySelectorAll('#infoTabsContent .tab-pane')
-                    .forEach(p => p.classList.remove('show', 'active'));
-                const infoTarget = document.querySelector(`#info-${target}`);
-                infoTarget.classList.add('active');
-                setTimeout(() => infoTarget.classList.add('show'), 10);
-
-                // update nav-link active
-                document.querySelectorAll('#bookingTabs .nav-link')
-                    .forEach(link => link.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-
-
-        const paketSelect = document.getElementById('paket_wisata');
-        const lihatDetailBtn = document.getElementById('lihatDetailBtn');
-        const detailModalLabel = document.getElementById('detailModalLabel');
-        const detailModalBody = document.getElementById('detailModalBody');
-
-        paketSelect.addEventListener('change', function() {
-            lihatDetailBtn.disabled = !paketSelect.value;
-        });
-
-        lihatDetailBtn.addEventListener('click', function() {
-            const selected = paketSelect.value;
-            const detailDiv = document.getElementById(selected + '_detail');
-            if (detailDiv) {
-                detailModalLabel.textContent = detailDiv.querySelector('h5').textContent;
-                detailModalBody.innerHTML = detailDiv.innerHTML;
-            }
-        });
-
-
-        //dropdown user
-        const userMenuToggle = document.getElementById("userMenuToggle");
-        const userDropdown = document.getElementById("userDropdown");
-
-        userMenuToggle.addEventListener("click", function(e) {
-            e.preventDefault();
-            userDropdown.style.display =
-                userDropdown.style.display === "block" ? "none" : "block";
-        });
-
-        // Klik di luar menu untuk menutup
-        document.addEventListener("click", function(e) {
-            if (!userMenuToggle.contains(e.target) && !userDropdown.contains(e.target)) {
-                userDropdown.style.display = "none";
-            }
-        });
-    </script>
-</body>
-
-</body>
-
-</html>
+@endsection

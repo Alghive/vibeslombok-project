@@ -413,7 +413,7 @@
     <!-- Pagination -->
     <nav>
   <ul class="pagination justify-content-center mt-5" id="pagination"></ul>
-</nav>
+ </nav>
   </div>
 
   <!-- Footer -->
