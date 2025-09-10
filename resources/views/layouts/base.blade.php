@@ -34,7 +34,7 @@
     @yield('script')
 
     <!-- Sub Header -->
-    
+
 
     <!-- Scripts -->
     <!-- jQuery -->
@@ -54,7 +54,6 @@
     <script src="{{ asset('assets/js/video.js') }}"></script>
     <script src="{{ asset('assets/js/slick-slider.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
@@ -103,53 +102,117 @@
         });
 
 
-        document.querySelectorAll('#bookingTabs .nav-link').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const target = this.getAttribute('data-bs-target');
+        // script untuk navigasi sidebar
+        document.querySelectorAll('.profile-sidebar ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
 
-                // switch form
-                document.querySelectorAll('#formTabsContent .tab-pane')
-                    .forEach(p => p.classList.remove('show', 'active'));
-                const formTarget = document.querySelector(`#form-${target}`);
-                formTarget.classList.add('active');
-                setTimeout(() => formTarget.classList.add('show'), 10);
+                // hapus active semua menu
+                document.querySelectorAll('.profile-sidebar ul li').forEach(li => li.classList.remove(
+                    'active'));
 
-                // switch info
-                document.querySelectorAll('#infoTabsContent .tab-pane')
-                    .forEach(p => p.classList.remove('show', 'active'));
-                const infoTarget = document.querySelector(`#info-${target}`);
-                infoTarget.classList.add('active');
-                setTimeout(() => infoTarget.classList.add('show'), 10);
+                // beri active pada menu yang diklik
+                this.parentElement.classList.add('active');
 
-                // update nav-link active
-                document.querySelectorAll('#bookingTabs .nav-link')
-                    .forEach(link => link.classList.remove('active'));
-                this.classList.add('active');
+                // sembunyikan semua konten
+                document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove(
+                'active'));
+
+                // tampilkan konten sesuai target
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
             });
         });
 
+        // Tab History
+        document.addEventListener("DOMContentLoaded", function() {
+            // cek query string ?tab=riwayat
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
 
+            if (tab) {
+                // hapus active semua menu dan section
+                document.querySelectorAll('.profile-sidebar ul li').forEach(li => li.classList.remove('active'));
+                document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
 
-        const paketSelect = document.getElementById('paket_wisata');
-        const lihatDetailBtn = document.getElementById('lihatDetailBtn');
-        const detailModalLabel = document.getElementById('detailModalLabel');
-        const detailModalBody = document.getElementById('detailModalBody');
+                // aktifkan menu sidebar
+                const targetLink = document.querySelector(`.profile-sidebar a[data-target="${tab}"]`);
+                if (targetLink) {
+                    targetLink.parentElement.classList.add('active');
+                }
 
-        paketSelect.addEventListener('change', function() {
-            lihatDetailBtn.disabled = !paketSelect.value;
-        });
-
-        lihatDetailBtn.addEventListener('click', function() {
-            const selected = paketSelect.value;
-            const detailDiv = document.getElementById(selected + '_detail');
-            if (detailDiv) {
-                detailModalLabel.textContent = detailDiv.querySelector('h5').textContent;
-                detailModalBody.innerHTML = detailDiv.innerHTML;
+                // aktifkan konten
+                const targetSection = document.getElementById(tab);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
             }
         });
 
+        // Pagination
+        document.addEventListener("DOMContentLoaded", function() {
+            const itemsPerPage = 9;
+            const items = document.querySelectorAll(".blog-item");
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+            const pagination = document.getElementById("pagination");
+            let currentPage = 1;
 
-        //dropdown user
+            function showPage(page) {
+                items.forEach((item, index) => {
+                    item.style.display =
+                        (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ?
+                        "block" : "none";
+                });
+
+                // update active class
+                document.querySelectorAll("#pagination li.page-item").forEach(li => li.classList.remove("active"));
+                document.querySelector(`#pagination li[data-page="${page}"]`)?.classList.add("active");
+
+                // update prev/next disabled
+                document.getElementById("prev").parentElement.classList.toggle("disabled", page === 1);
+                document.getElementById("next").parentElement.classList.toggle("disabled", page === totalPages);
+
+                currentPage = page;
+            }
+
+            // generate tombol
+            pagination.innerHTML = `
+    <li class="page-item"><a class="page-link" href="#" id="prev">&laquo;</a></li>
+  `;
+
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `
+      <li class="page-item" data-page="${i}"><a class="page-link" href="#">${i}</a></li>
+    `;
+            }
+
+            pagination.innerHTML += `
+    <li class="page-item"><a class="page-link" href="#" id="next">&raquo;</a></li>
+  `;
+
+            // event click
+            pagination.querySelectorAll(".page-item[data-page]").forEach(li => {
+                li.addEventListener("click", e => {
+                    e.preventDefault();
+                    showPage(Number(li.dataset.page));
+                });
+            });
+
+            document.getElementById("prev").addEventListener("click", e => {
+                e.preventDefault();
+                if (currentPage > 1) showPage(currentPage - 1);
+            });
+
+            document.getElementById("next").addEventListener("click", e => {
+                e.preventDefault();
+                if (currentPage < totalPages) showPage(currentPage + 1);
+            });
+
+            showPage(1);
+        });
+
+
+        // user menu
         const userMenuToggle = document.getElementById("userMenuToggle");
         const userDropdown = document.getElementById("userDropdown");
 
@@ -164,6 +227,41 @@
             if (!userMenuToggle.contains(e.target) && !userDropdown.contains(e.target)) {
                 userDropdown.style.display = "none";
             }
+        });
+
+
+        // Fungsi +/-
+        document.addEventListener("DOMContentLoaded", function() {
+            // cari semua cart item
+            document.querySelectorAll(".cart-item").forEach(function(item) {
+                let minusBtn = item.querySelector(".btn-outline-success .fa-minus")?.parentElement;
+                let plusBtn = item.querySelector(".btn-outline-success .fa-plus")?.parentElement;
+                let input = item.querySelector("input[type='text']");
+
+                if (minusBtn && plusBtn && input) {
+                    // event tombol minus
+                    minusBtn.addEventListener("click", function() {
+                        let current = parseInt(input.value) || 0;
+                        if (current > 1) {
+                            input.value = current - 1;
+                        }
+                    });
+
+                    // event tombol plus
+                    plusBtn.addEventListener("click", function() {
+                        let current = parseInt(input.value) || 0;
+                        input.value = current + 1;
+                    });
+
+                    // validasi manual input (supaya tidak kosong / nol)
+                    input.addEventListener("input", function() {
+                        let val = parseInt(input.value);
+                        if (isNaN(val) || val < 1) {
+                            input.value = 1;
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
