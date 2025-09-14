@@ -37,6 +37,10 @@ Route::get('/blog', function () {
 Route::get('/detail_blog', function () {
     return view('detail_blog'); // otomatis cari resources/views/detail_blog.blade.php
 })->name('detail_blog');
+
+Route::get('/faq', function () {
+    return view('faq'); // otomatis cari resources/views/faq.blade.php
+})->name('faq');
 // Authentication routes
 Route::get('/login', [App\Http\Controllers\LoginControllers::class, 'showLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\LoginControllers::class, 'login'])->name('login.post');

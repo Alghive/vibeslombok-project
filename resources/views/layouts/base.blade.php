@@ -24,6 +24,7 @@
 
     <!-- CDN tetap boleh langsung -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 
 </head>
 
@@ -41,10 +42,11 @@
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    {{-- <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script> --}}
 
     <!-- Bootstrap Bundle dengan Popper (via CDN, tetap boleh dipakai kalau mau) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 
     <!-- Additional JS Files -->
     <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
@@ -149,67 +151,130 @@
             }
         });
 
-        // Pagination
-        document.addEventListener("DOMContentLoaded", function() {
-            const itemsPerPage = 9;
-            const items = document.querySelectorAll(".blog-item");
-            const totalPages = Math.ceil(items.length / itemsPerPage);
-            const pagination = document.getElementById("pagination");
-            let currentPage = 1;
+        // Pagination rent car
+        document.addEventListener("DOMContentLoaded", function () {
+  const itemsPerPage = 9; 
+  const items = document.querySelectorAll(".car-item");
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const pagination = document.getElementById("pagination");
+  let currentPage = 1;
 
-            function showPage(page) {
-                items.forEach((item, index) => {
-                    item.style.display =
-                        (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ?
-                        "block" : "none";
-                });
+  function showPage(page) {
+    items.forEach((item, index) => {
+      item.style.display =
+        (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage)
+          ? "block" : "none";
+    });
 
-                // update active class
-                document.querySelectorAll("#pagination li.page-item").forEach(li => li.classList.remove("active"));
-                document.querySelector(`#pagination li[data-page="${page}"]`)?.classList.add("active");
+    // update active class
+    document.querySelectorAll("#pagination li.page-item").forEach(li => li.classList.remove("active"));
+    document.querySelector(`#pagination li[data-page="${page}"]`)?.classList.add("active");
 
-                // update prev/next disabled
-                document.getElementById("prev").parentElement.classList.toggle("disabled", page === 1);
-                document.getElementById("next").parentElement.classList.toggle("disabled", page === totalPages);
+    // update prev/next disabled
+    document.getElementById("prev").parentElement.classList.toggle("disabled", page === 1);
+    document.getElementById("next").parentElement.classList.toggle("disabled", page === totalPages);
 
-                currentPage = page;
-            }
+    currentPage = page;
+  }
 
-            // generate tombol
-            pagination.innerHTML = `
+  // generate tombol
+  pagination.innerHTML = `
     <li class="page-item"><a class="page-link" href="#" id="prev">&laquo;</a></li>
   `;
 
-            for (let i = 1; i <= totalPages; i++) {
-                pagination.innerHTML += `
+  for (let i = 1; i <= totalPages; i++) {
+    pagination.innerHTML += `
       <li class="page-item" data-page="${i}"><a class="page-link" href="#">${i}</a></li>
     `;
-            }
+  }
 
-            pagination.innerHTML += `
+  pagination.innerHTML += `
     <li class="page-item"><a class="page-link" href="#" id="next">&raquo;</a></li>
   `;
 
-            // event click
-            pagination.querySelectorAll(".page-item[data-page]").forEach(li => {
-                li.addEventListener("click", e => {
-                    e.preventDefault();
-                    showPage(Number(li.dataset.page));
-                });
-            });
+  // event click
+  pagination.querySelectorAll(".page-item[data-page]").forEach(li => {
+    li.addEventListener("click", e => {
+      e.preventDefault();
+      showPage(Number(li.dataset.page));
+    });
+  });
 
-            document.getElementById("prev").addEventListener("click", e => {
-                e.preventDefault();
-                if (currentPage > 1) showPage(currentPage - 1);
-            });
+  document.getElementById("prev").addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage > 1) showPage(currentPage - 1);
+  });
 
-            document.getElementById("next").addEventListener("click", e => {
-                e.preventDefault();
-                if (currentPage < totalPages) showPage(currentPage + 1);
-            });
+  document.getElementById("next").addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  });
 
-            showPage(1);
-        });
+  showPage(1);
+});
+
+
+// Pagination tour
+  document.addEventListener("DOMContentLoaded", function () {
+  const itemsPerPage = 9; 
+  const items = document.querySelectorAll(".tour-item");
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const pagination = document.getElementById("pagination");
+  let currentPage = 1;
+
+  function showPage(page) {
+    items.forEach((item, index) => {
+      item.style.display =
+        (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage)
+          ? "block" : "none";
+    });
+
+    // update active class
+    document.querySelectorAll("#pagination li.page-item").forEach(li => li.classList.remove("active"));
+    document.querySelector(`#pagination li[data-page="${page}"]`)?.classList.add("active");
+
+    // update prev/next disabled
+    document.getElementById("prev").parentElement.classList.toggle("disabled", page === 1);
+    document.getElementById("next").parentElement.classList.toggle("disabled", page === totalPages);
+
+    currentPage = page;
+  }
+
+  // generate tombol
+  pagination.innerHTML = `
+    <li class="page-item"><a class="page-link" href="#" id="prev">&laquo;</a></li>
+  `;
+
+  for (let i = 1; i <= totalPages; i++) {
+    pagination.innerHTML += `
+      <li class="page-item" data-page="${i}"><a class="page-link" href="#">${i}</a></li>
+    `;
+  }
+
+  pagination.innerHTML += `
+    <li class="page-item"><a class="page-link" href="#" id="next">&raquo;</a></li>
+  `;
+
+  // event click
+  pagination.querySelectorAll(".page-item[data-page]").forEach(li => {
+    li.addEventListener("click", e => {
+      e.preventDefault();
+      showPage(Number(li.dataset.page));
+    });
+  });
+
+  document.getElementById("prev").addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage > 1) showPage(currentPage - 1);
+  });
+
+  document.getElementById("next").addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  });
+
+  showPage(1);
+});
 
 
         // user menu
@@ -263,6 +328,57 @@
                 }
             });
         });
+
+        // FAQ
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            item.querySelector(".faq-question").addEventListener("click", () => {
+            // Tutup semua sebelum buka yang baru
+            faqItems.forEach(i => i.classList.remove("active"));
+            item.classList.toggle("active");
+            });
+        });
+
+        // Dropdown footer
+        document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.querySelector(".dropdown-footer");
+
+        dropdown.querySelector(".dropdown-toggle-footer").addEventListener("click", function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle("active");
+        });
+    });
+
+    // carousel card
+  document.addEventListener("DOMContentLoaded", function () {
+  // cari semua carousel yang pakai id "carCarousel"
+  document.querySelectorAll("#carCarousel").forEach((carousel, index) => {
+    let newId = "carCarousel" + (index + 1); // bikin id unik
+    carousel.id = newId;
+
+    // update semua tombol & thumbnail target di card ini
+    carousel.closest(".car-card")
+      .querySelectorAll("[data-bs-target='#carCarousel']")
+      .forEach(el => el.setAttribute("data-bs-target", "#" + newId));
+
+    // event listener sinkron thumbnail
+    carousel.addEventListener("slid.bs.carousel", function (e) {
+      let thumbs = carousel.closest(".car-card").querySelectorAll(".thumb");
+      thumbs.forEach(t => t.classList.remove("active"));
+      thumbs[e.to]?.classList.add("active");
+    });
+
+    // klik thumbnail -> slide ke index
+    let thumbs = carousel.closest(".car-card").querySelectorAll(".thumb");
+    thumbs.forEach((thumb, i) => {
+      thumb.addEventListener("click", function () {
+        thumbs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  });
+});
     </script>
 </body>
 

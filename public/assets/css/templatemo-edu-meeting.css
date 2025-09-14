@@ -29,7 +29,6 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-
 /* 
 ---------------------------------------------
 reset
@@ -208,21 +207,17 @@ body {
 }
 
 @media (max-width: 991px) {
-
     html,
     body {
         overflow-x: hidden;
     }
-
     .mobile-top-fix {
         margin-top: 30px;
         margin-bottom: 0px;
     }
-
     .mobile-bottom-fix {
         margin-bottom: 30px;
     }
-
     .mobile-bottom-fix-big {
         margin-bottom: 60px;
     }
@@ -269,18 +264,16 @@ body {
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;
+    color: #0d6efd;
 }
 
 /* custom border-radius */
 .rounded-4 {
-    border-radius: 1rem !important;
-    /* sekitar 24px */
+    border-radius: 1rem !important; /* sekitar 24px */
 }
 
 .rounded-5 {
-    border-radius: 1.5rem !important;
-    /* sekitar 32px */
+    border-radius: 1.5rem !important; /* sekitar 32px */
 }
 
 /* 
@@ -292,36 +285,29 @@ login
 .box-area {
     width: 930px;
 }
-
 /*------------ Right box ------------*/
 .right-box {
     padding: 40px 30px 40px 40px;
 }
-
 /*------------ Custom Placeholder ------------*/
 ::placeholder {
     font-size: 16px;
 }
-
 .rounded-4 {
     border-radius: 20px;
 }
-
 .rounded-5 {
     border-radius: 30px;
 }
-
 /*------------ For small screens------------*/
 @media only screen and (max-width: 768px) {
     .box-area {
         margin: 0 10px;
     }
-
     .left-box {
         height: 100px;
         overflow: hidden;
     }
-
     .right-box {
         padding: 20px;
     }
@@ -332,6 +318,46 @@ login
 header
 --------------------------------------------- 
 */
+
+/* .header-area .main-nav .logo {
+  line-height: normal;   
+  display: flex;         
+  align-items: center;   
+  height: 80px;          
+  padding: 0;            
+}
+
+.logo-img {
+  height: 50px;          
+  width: auto;
+  object-fit: contain;
+  display: block;
+} */
+
+/* Styling Logo Navbar */
+.nav-logo {
+    height: 85px; /* tinggi konsisten */
+    max-height: 90px; /* batas maksimum */
+    width: auto; /* jaga proporsi */
+    object-fit: contain; /* biar gak gepeng */
+    transition: all 0.3s ease-in-out;
+    vertical-align: middle;
+}
+
+/* Saat sticky header (scroll) logo agak mengecil */
+.background-header .nav-logo {
+    height: 85px; /* tinggi konsisten */
+    max-height: 90px; /* batas maksimum */
+}
+
+/* Responsive di layar kecil */
+@media (max-width: 767px) {
+    .nav-logo {
+        height: 45px;
+        max-height: 50px;
+        margin-top: 10px;
+    }
+}
 
 .sub-header {
     background-color: #1f272b;
@@ -694,7 +720,6 @@ header
         padding-left: 7px;
         padding-right: 7px;
     }
-
     .header-area .main-nav:before {
         display: none;
     }
@@ -704,17 +729,14 @@ header
     .header-area .main-nav .logo {
         color: #1e1e1e;
     }
-
     .header-area.header-sticky .nav li a:hover,
     .header-area.header-sticky .nav li a.active {
         color: #f5a425 !important;
         opacity: 1;
     }
-
     .header-area.header-sticky .nav li.search-icon a {
         width: 100%;
     }
-
     .header-area {
         background-color: #f7f7f7;
         padding: 0px 15px;
@@ -722,23 +744,18 @@ header
         box-shadow: none;
         text-align: center;
     }
-
     .header-area .container {
         padding: 0px;
     }
-
     .header-area .logo {
         margin-left: 30px;
     }
-
     .header-area .menu-trigger {
         display: block !important;
     }
-
     .header-area .main-nav {
         overflow: hidden;
     }
-
     .header-area .main-nav .nav {
         float: none;
         width: 100%;
@@ -749,15 +766,12 @@ header
         transition: all 0s ease 0s;
         margin-left: 0px;
     }
-
     .header-area .main-nav .nav li:first-child {
         border-top: 1px solid #eee;
     }
-
     .header-area.header-sticky .nav {
         margin-top: 100px !important;
     }
-
     .header-area .main-nav .nav li {
         width: 100%;
         background: #fff;
@@ -765,7 +779,6 @@ header
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-
     .header-area .main-nav .nav li a {
         height: 50px !important;
         line-height: 50px !important;
@@ -774,12 +787,10 @@ header
         background: #f7f7f7 !important;
         color: #191a20 !important;
     }
-
     .header-area .main-nav .nav li a:hover {
         background: #eee !important;
         color: #f5a425 !important;
     }
-
     .header-area .main-nav .nav li.has-sub ul.sub-menu {
         position: relative;
         visibility: inherit;
@@ -792,27 +803,22 @@ header
         height: 0px;
         transition: all 0s;
     }
-
     .header-area .main-nav .nav li.submenu ul li a {
         font-size: 12px;
         font-weight: 400;
     }
-
     .header-area .main-nav .nav li.submenu ul li a:hover:before {
         width: 0px;
     }
-
     .header-area .main-nav .nav li.has-sub ul.sub-menu {
         height: auto;
     }
-
     .header-area .main-nav .nav li.has-sub:after {
         color: #3b566e;
         right: 30px;
         font-size: 14px;
         top: 15px;
     }
-
     .header-area .main-nav .nav li.submenu:hover ul,
     .header-area .main-nav .nav li.submenu:focus ul {
         height: 0px;
@@ -827,12 +833,9 @@ header
 
 /* Button Sign In di Navbar */
 .header-area .main-nav .nav li.sign-in-btn a {
-    border: 2px solid #ffffffff;
-    /* outline warna utama */
-    background: transparent;
-    /* transparan sebelum hover */
-    color: #ffffffff !important;
-    /* teks warna utama */
+    border: 2px solid #ffffffff; /* outline warna utama */
+    background: transparent; /* transparan sebelum hover */
+    color: #ffffffff !important; /* teks warna utama */
     padding: 8px 20px;
     border-radius: 25px;
     font-weight: 600;
@@ -871,15 +874,12 @@ header
     font-size: 16px;
     position: relative;
 }
-
 @media (max-width: 767px) {
     .header-area .main-nav .nav li.cart-icon {
         background: #f7f7f7 !important;
-        width: auto;
-        /* jangan full width */
+        width: auto; /* jangan full width */
         justify-content: flex-start;
-        margin: 0;
-        /* rapat kayak li lainnya */
+        margin: 0; /* rapat kayak li lainnya */
     }
 
     .header-area .main-nav .nav li.cart-icon .cart-btn {
@@ -895,18 +895,16 @@ header
     }
 }
 
-
 /* Saat navbar discroll (jadi putih) */
 .background-header .main-nav .nav li.cart-icon .cart-btn {
-    border: 2px solid #0d6efd;
-    /* hitam */
+    border: 2px solid #0d6efd; /* hitam */
     color: #0d6efd !important;
 }
 
 .header-area .main-nav .nav li.cart-icon .cart-btn:hover {
     background: #0d6efd;
     color: #fff !important;
-    border: none
+    border: none;
 }
 
 .header-area .main-nav .nav li.cart-icon .badge {
@@ -929,15 +927,13 @@ header
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* soft shadow default */
-    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* soft shadow default */
+    border: 2px solid #ddd;
 }
 
 .user-avatar:hover {
     transform: scale(1.08);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-    /* efek glow saat hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* efek glow saat hover */
 }
 
 /* Avatar besar di dropdown */
@@ -947,8 +943,7 @@ header
     border-radius: 50%;
     object-fit: cover;
     margin-right: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    /* shadow halus */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* shadow halus */
 }
 
 /* Dropdown User Menu */
@@ -963,8 +958,7 @@ header
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     z-index: 1000;
-    padding-bottom: 10px;
-    /* tambahan jarak bawah */
+    padding-bottom: 10px; /* tambahan jarak bawah */
 }
 
 .user-dropdown .user-info {
@@ -990,25 +984,20 @@ header
 .user-dropdown ul {
     list-style: none;
     margin: 0;
-    padding: 6px 0;
-    /* spasi atas-bawah antar grup */
+    padding: 6px 0; /* spasi atas-bawah antar grup */
 }
 
 .user-dropdown ul li {
-    margin: 0;
-    /* rapikan, biar item menempel */
+    margin: 0; /* rapikan, biar item menempel */
     padding: 0;
 }
 
 .user-dropdown ul li a {
     display: flex;
     align-items: center;
-    width: 100%;
-    /* <= biar penuh di li */
-    gap: 10px;
-    /* jarak ikon-teks */
-    padding: 12px 18px;
-    /* area klik konsisten */
+    width: 100%; /* <= biar penuh di li */
+    gap: 10px; /* jarak ikon-teks */
+    padding: 12px 18px; /* area klik konsisten */
     font-size: 13px;
     font-weight: 400;
     color: #333 !important;
@@ -1016,17 +1005,14 @@ header
     text-decoration: none;
     transition: all 0.3s ease;
     border-radius: 0;
-    box-sizing: border-box;
-    /* biar padding ga nambah width */
+    box-sizing: border-box; /* biar padding ga nambah width */
 }
 
 .user-dropdown ul li a i {
     margin-right: 10px;
-    color: #333 !important;
-    /* icon juga hitam */
+    color: #333 !important; /* icon juga hitam */
     font-size: 14px;
-    flex-shrink: 0;
-    /* icon ga ketarik */
+    flex-shrink: 0; /* icon ga ketarik */
 }
 
 .nav li.user-icon .user-dropdown ul li a:hover {
@@ -1036,16 +1022,13 @@ header
 }
 
 .user-dropdown ul li a:hover i {
-    color: #333 !important;
-    /* icon tetap hitam */
+    color: #333 !important; /* icon tetap hitam */
 }
 
 /* Override hover khusus di dropdown */
 .user-dropdown ul li a:hover {
-    background: #f0f0f0 !important;
-    /* abu muda */
-    color: #333 !important;
-    /* teks tetap hitam */
+    background: #f0f0f0 !important; /* abu muda */
+    color: #333 !important; /* teks tetap hitam */
 }
 
 /* Pastikan .user-dropdown tidak ikut pewarnaan dari nav li:hover */
@@ -1054,56 +1037,41 @@ header
 }
 
 .nav li.user-icon .user-dropdown ul li a {
-    background: transparent !important;
-    /* hilangkan background default */
+    background: transparent !important; /* hilangkan background default */
 }
 
 .nav li.user-icon .user-dropdown ul li a:hover {
-    background: transparent !important;
-    /* pastikan tetap transparan */
+    background: transparent !important; /* pastikan tetap transparan */
     color: #333 !important;
     padding-left: 20px;
 }
 
 /* Tombol Edit Profile */
 .edit-profile-btn {
-    padding: 0 15px 15px;
-    /* hanya kasih jarak, tanpa background */
-    background: transparent;
-    /* jangan ada background */
-    border: none;
-    /* hilangkan border */
+    padding: 0 15px 15px; /* hanya kasih jarak, tanpa background */
+    background: transparent; /* jangan ada background */
+    border: none; /* hilangkan border */
     border-bottom: 1px solid #dededeff;
 }
 
 .user-dropdown .edit-profile-btn a {
-    display: flex !important;
-    /* pastikan flex */
-    align-items: center !important;
-    /* vertikal center */
-    justify-content: center !important;
-    /* horizontal center */
-    gap: 8px !important;
-    /* jarak icon-teks */
+    display: flex !important; /* pastikan flex */
+    align-items: center !important; /* vertikal center */
+    justify-content: center !important; /* horizontal center */
+    gap: 8px !important; /* jarak icon-teks */
 
-    width: 100% !important;
-    /* full width tombol */
-    background: #828282ff !important;
-    /* abu muda */
-    color: #ffffffff !important;
-    /* teks hitam */
-    padding: 12px 0 !important;
-    /* padding atas-bawah */
+    width: 100% !important; /* full width tombol */
+    background: #828282ff !important; /* abu muda */
+    color: #ffffffff !important; /* teks hitam */
+    padding: 12px 0 !important; /* padding atas-bawah */
     font-size: 14px !important;
     font-weight: 600 !important;
     border-radius: 8px !important;
     transition: all 0.3s ease !important;
     text-decoration: none !important;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1) !important;
-    line-height: 1 !important;
-    /* biar teks pas */
-    text-transform: uppercase !important;
-    /* biar sama kayak gambar */
+    line-height: 1 !important; /* biar teks pas */
+    text-transform: uppercase !important; /* biar sama kayak gambar */
 }
 
 .user-dropdown .edit-profile-btn a i {
@@ -1114,10 +1082,8 @@ header
 .user-dropdown .edit-profile-btn a:hover,
 .user-dropdown .edit-profile-btn a:focus,
 .user-dropdown .edit-profile-btn a:active {
-    background: #0015ff !important;
-    /* biru */
-    color: #ffffff !important;
-    /* teks putih */
+    background: #0015ff !important; /* biru */
+    color: #ffffff !important; /* teks putih */
 }
 
 /* Override biar nggak ketarik aturan nav global */
@@ -1129,10 +1095,8 @@ header
     display: block;
     width: 100%;
     height: 3px;
-    background: red !important;
-    /* abu tua */
-    margin: 10px 0;
-    /* kasih jarak atas bawah biar kelihatan */
+    background: red !important; /* abu tua */
+    margin: 10px 0; /* kasih jarak atas bawah biar kelihatan */
 }
 
 .nav li.user-icon .user-dropdown .edit-profile-btn a {
@@ -1140,18 +1104,15 @@ header
 }
 
 @media (max-width: 767px) {
-
     /* Override khusus tombol Edit Profile */
     .nav li.user-icon .user-dropdown .edit-profile-btn a {
-        background: #828282ff !important;
-        /* default abu */
+        background: #828282ff !important; /* default abu */
         color: #ffffff !important;
     }
 
     .nav li.user-icon .user-dropdown .edit-profile-btn a:hover,
     .nav li.user-icon .user-dropdown .edit-profile-btn a:focus {
-        background: #0015ff !important;
-        /* hover biru */
+        background: #0015ff !important; /* hover biru */
         color: #ffffff !important;
     }
 }
@@ -1194,12 +1155,9 @@ banner
 }
 
 .main-banner {
-    position: relative;
-    /* penting agar overlay tidak keluar */
-    height: 100vh;
-    /* penuh layar saja biar rapi */
-    overflow: hidden;
-    /* jaga supaya overlay/video tidak meluber */
+    position: relative; /* penting agar overlay tidak keluar */
+    height: 100vh; /* penuh layar saja biar rapi */
+    overflow: hidden; /* jaga supaya overlay/video tidak meluber */
 }
 
 .main-banner .caption {
@@ -1283,7 +1241,6 @@ services
     position: relative;
     z-index: 1;
 }
-
 /* hover end */
 
 .services {
@@ -1301,33 +1258,26 @@ services
     padding: 40px;
     min-height: 300px;
 
-    display: flex;
-    /* aktifkan flexbox */
-    flex-direction: column;
-    /* susun ke bawah */
-    justify-content: flex-end;
-    /* posisikan ke bawah */
+    display: flex; /* aktifkan flexbox */
+    flex-direction: column; /* susun ke bawah */
+    justify-content: flex-end; /* posisikan ke bawah */
     text-align: center;
 }
 
 .services .item {
-    position: relative;
-    /* penting biar child bisa absolute */
+    position: relative; /* penting biar child bisa absolute */
     overflow: hidden;
 }
 
 .services .item .down-content {
     position: absolute;
-    inset: 0;
-    /* top:0; right:0; bottom:0; left:0; */
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
     background: rgba(0, 0, 0, 0.4);
     padding: 20px;
-    border-radius: 20px;
-    /* sama dengan parent biar rapi */
+    border-radius: 20px; /* sama dengan parent biar rapi */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    /* teks di bawah */
+    justify-content: flex-end; /* teks di bawah */
     text-align: center;
     color: #fff;
 }
@@ -1430,13 +1380,13 @@ upcoming meetings
 */
 
 section.upcoming-meetings {
-    background-image: url(../images/batik-samar.png);
+    background-image: url(../images/bg-putih-batik.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 230px;
-    padding-bottom: 50px;
+    padding-bottom: 130px;
 }
 
 section.upcoming-meetings .section-heading {
@@ -1532,7 +1482,7 @@ section.upcoming-meetings .categories .main-button-red a {
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 600;
-    color: #a12c2f;
+    color: #0d6efd;
 }
 
 .meeting-item .down-content .date span {
@@ -1596,15 +1546,12 @@ section.apply-now .item p {
     background-color: #fff;
     margin-left: 45px;
 }
-
 .accordions .accordion {
     border-bottom: 1px solid #eee;
 }
-
 .accordions .last-accordion {
     border-bottom: none;
 }
-
 .accordion-head {
     padding: 20px;
     font-size: 18px;
@@ -1614,36 +1561,30 @@ section.apply-now .item p {
     transition: color 200ms ease-in-out;
     border-bottom: 1px solid #fff;
 }
-
 @media screen and (min-width: 768px) {
     .accordion-head {
         padding: 1rem;
         font-size: 1.2rem;
     }
 }
-
 .accordion-head .icon {
     float: right;
     transition: transform 200ms ease-in-out;
 }
-
 .accordion-head.is-open {
     color: #f5a425;
     border-bottom: none;
 }
-
 .accordion-head.is-open .icon {
     transform: rotate(45deg);
 }
-
 .accordion-body {
     overflow: hidden;
     height: 0;
     transition: height 300ms ease-in-out;
     border-bottom: 1px solid #fff;
 }
-
-.accordion-body>.content {
+.accordion-body > .content {
     padding: 20px;
     padding-top: 0;
 }
@@ -1653,14 +1594,22 @@ section.apply-now .item p {
 courses
 --------------------------------------------- 
 */
+/* About Us */
+img {
+    object-fit: contain;
+    max-height: 100%;
+    /* filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); */
+    transform: perspective(1000px) rotateY(-5deg);
+    border-radius: 10px;
+}
 
 section.our-courses {
-    background-image: url(../images/batik-samar.png);
+    background-image: url(../images/bg-putih-batik.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 
@@ -1695,7 +1644,7 @@ section.our-courses h2 {
 }
 
 .our-courses .item .down-content .info span {
-    color: #a12c2f;
+    color: #0d6efd;
     font-size: 15px;
     font-weight: 600;
     text-align: right;
@@ -1798,34 +1747,26 @@ section.our-courses h2 {
     border-radius: 50%;
     line-height: 50px;
 }
-
 /* Override khusus untuk section Our Service */
 #courses .section-heading h2 {
-    border-bottom: none;
-    /* hilangkan garis di h2 */
-    margin-bottom: 1px;
-    /* rapetin biar dekat ke p */
+    border-bottom: none; /* hilangkan garis di h2 */
+    margin-bottom: 1px; /* rapetin biar dekat ke p */
 }
 
 #courses .section-heading {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.15);
-    /* garis pindah ke container */
+    border-bottom: 1px solid rgba(250, 250, 250, 0.15); /* garis pindah ke container */
     padding-bottom: 20px;
     margin-bottom: 50px;
     text-align: center;
 }
 
 #courses .section-heading p {
-    color: rgba(255, 255, 255, 0.85);
-    /* putih lembut */
+    color: rgba(255, 255, 255, 0.85); /* putih lembut */
     font-size: 17px;
-    font-weight: 300;
-    /* tipis elegan */
+    font-weight: 300; /* tipis elegan */
     line-height: 1.8;
-    max-width: 700px;
-    /* biar tidak terlalu panjang */
-    margin: 0 auto;
-    /* center */
+    max-width: 700px; /* biar tidak terlalu panjang */
+    margin: 0 auto; /* center */
 }
 
 /*
@@ -1835,12 +1776,25 @@ our facts
 */
 
 section.our-facts {
-    background-image: url(../images/batik-samar.png);
+    position: relative;
+    background-image: url(../images/bg-putih-batik.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 140px 0px 125px 0px;
+    z-index: 1;
+}
+
+section.our-facts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.55);  */
+    z-index: -1;
 }
 
 section.our-facts h2 {
@@ -1871,7 +1825,6 @@ section.our-facts h2 {
     font-weight: 700;
     font-size: 36px;
 }
-
 .count-title {
     font-size: 18px;
     font-weight: 500;
@@ -1898,6 +1851,113 @@ section.our-facts .video img {
     max-width: 56px;
 }
 
+/* --- Blog Card carousel --- */
+/* .blog-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 10px; 
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.blog-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 30px;
+}
+
+.blog-card .stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+} */
+
+/* --- Navigasi Panah --- */
+/* .owl-blog-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.owl-blog-carousel .owl-nav button {
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all; 
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.owl-blog-carousel .owl-nav button:hover {
+  background: #0d6efd !important;
+  transform: scale(1.1);
+} */
+
+/* --- Dots Indicator --- */
+/* .owl-blog-carousel .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-blog-carousel .owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  margin: 5px 6px;
+  background: #d1d1d1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.owl-blog-carousel .owl-dots .owl-dot.active span {
+  background: #0d6efd;
+  transform: scale(1.3);
+} */
+
+/* --- FIX: Jangan pakai flex di item, biar dimensi card asli tidak berubah --- */
+/* .owl-blog-carousel .owl-stage {
+  display: block;
+}
+
+.owl-blog-carousel .owl-item {
+  display: block;
+  height: auto;
+} */
+
 /* 
 ---------------------------------------------
 contact us
@@ -1905,12 +1965,13 @@ contact us
 */
 
 section.contact-us {
-    background-image: url(../images/batik-samar.png);
+    background-image: url(../images/bg-putih-batik.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 140px 0px 0px 0px;
+    padding-bottom: 80px;
 }
 
 section.contact-us #contact {
@@ -2011,51 +2072,155 @@ section.contact-us .right-info ul li span {
     font-weight: 700;
 }
 
+/* Footer */
 .footer {
-    text-align: center;
-    margin-top: 140px;
-    border-top: 1px solid rgba(250, 250, 250, 0.15);
-    padding: 50px 0px;
+    background-color: #1e1e1e; /* dark grey */
+    color: #ddd;
+    padding: 60px 0 30px;
+    font-size: 15px;
 }
 
-.footer p {
+.footer .footer-logo {
+    display: flex;
+    align-items: center; /* sejajarkan vertikal dengan text */
+    gap: 12px; /* jarak antara logo dan teks jika ada */
+    margin-bottom: 15px;
+}
+
+.footer .footer-logo img {
+    height: 120px; /* lebih kecil dari sebelumnya */
+    width: auto;
+    object-fit: contain;
+    margin-top: -60px; /* sedikit naik biar rata dengan title */
+}
+
+.footer .footer-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #f5a425;
     text-transform: uppercase;
-    font-size: 14px;
-    color: #fff;
 }
 
-.footer p a {
+.footer .footer-about {
+    line-height: 1.7;
+    font-size: 14px;
+    margin-top: -45px;
+}
+
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* toggle service */
+.footer .dropdown-toggle-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer .dropdown-toggle-footer {
+    display: inline-flex; /* biar icon nempel dengan teks */
+    align-items: center;
+    gap: 6px; /* jarak kecil antara teks dan icon */
+    cursor: pointer;
+}
+
+/* icon animasi */
+.footer .dropdown-toggle-footer i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* sub-menu hidden */
+.footer .dropdown-menu-footer {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 8px;
+    display: none;
+}
+
+.footer .dropdown-menu-footer li {
+    margin-bottom: 6px;
+}
+
+.footer .dropdown-menu-footer a {
+    font-size: 14px;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer .dropdown-menu-footer a:hover {
     color: #f5a425;
 }
 
-.footer-content {
-    background-image: url(../images/batik-samar.png);
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 140px 0px 0px 0px;
+/* saat aktif */
+.footer .dropdown-footer.active .dropdown-menu-footer {
+    display: block;
 }
 
-.footer-content .footer {
-    text-align: center;
-    margin-top: 140px;
-    border-top: 1px solid rgba(250, 250, 250, 0.15);
-    padding: 50px 0px;
+.footer .dropdown-footer.active .dropdown-toggle-footer i {
+    transform: rotate(180deg);
 }
 
-.footer-content .footer p {
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #fff;
+.footer .footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.footer-content .footer p a {
+.footer .footer-links a:hover {
     color: #f5a425;
 }
 
-.footer-content .footer p a:hover {
-    opacity: 0.9;
+.footer .footer-partner .partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer .footer-partner img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    padding: 0;
+    border-radius: 0;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ddd;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer .footer-social a:hover {
+    color: #f5a425;
+}
+
+.footer .footer-location a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .footer-location a:hover {
+    color: #f5a425;
+}
+
+.footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 13px;
+    color: #aaa;
 }
 
 /*
@@ -2065,16 +2230,14 @@ heading page
 */
 
 section.heading-page {
-    position: relative;
-    /* supaya overlay bisa nempel */
+    position: relative; /* supaya overlay bisa nempel */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 129px;
     padding-bottom: 110px;
     text-align: center;
-    color: #fff;
-    /* teks jadi lebih kontras */
+    color: #fff; /* teks jadi lebih kontras */
 }
 
 section.heading-page::before {
@@ -2084,15 +2247,13 @@ section.heading-page::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* overlay hitam transparan */
+    background: rgba(0, 0, 0, 0.5); /* overlay hitam transparan */
     z-index: 1;
 }
 
 section.heading-page .container {
     position: relative;
-    z-index: 2;
-    /* pastikan teks di atas overlay */
+    z-index: 2; /* pastikan teks di atas overlay */
 }
 
 section.heading-page h6 {
@@ -2122,17 +2283,13 @@ upcoming meetings page
 
 /* pagination */
 .pagination {
-    display: flex;
-    /* pastikan horizontal */
-    justify-content: center;
-    /* biar center */
-    gap: 6px;
-    /* jarak antar tombol */
+    display: flex; /* pastikan horizontal */
+    justify-content: center; /* biar center */
+    gap: 6px; /* jarak antar tombol */
 }
 
 .pagination .page-item {
-    display: inline-flex;
-    /* horizontal */
+    display: inline-flex; /* horizontal */
 }
 
 .pagination .page-link {
@@ -2174,12 +2331,10 @@ upcoming meetings page
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .car-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-
 .car-img {
     width: 100%;
     height: 220px;
@@ -2190,23 +2345,19 @@ upcoming meetings page
 .car-content {
     padding: 20px;
 }
-
 .car-title a {
     text-decoration: none;
     color: #1f272b;
     font-weight: 600;
 }
-
 .car-title a:hover {
     color: #0d6efd;
 }
-
 .rent-price {
     font-size: 18px;
     font-weight: 700;
     color: #0d6efd;
 }
-
 .specs li {
     display: flex;
     justify-content: space-between;
@@ -2214,13 +2365,11 @@ upcoming meetings page
     padding: 6px 0;
     font-size: 14px;
 }
-
 .btn-primary {
     background-color: #0d6efd;
     border: none;
     font-weight: 600;
 }
-
 .btn-primary:hover {
     background-color: #0b5ed7;
 }
@@ -2240,15 +2389,12 @@ upcoming meetings page
 }
 
 .available {
-    background-color: #28a745;
-    /* hijau */
+    background-color: #28a745; /* hijau */
 }
 
 .not-available {
-    background-color: #dc3545;
-    /* merah */
+    background-color: #dc3545; /* merah */
 }
-
 /* Carousel di card (jangan diotak atik) */
 .car-card .carousel-item img {
     height: 220px;
@@ -2319,25 +2465,21 @@ upcoming meetings page
 
 /* Header dan Footer dengan pembatas elegan */
 .custom-header {
-    border-bottom: 1px solid #e9ecef;
-    /* abu-abu soft */
+    border-bottom: 1px solid #e9ecef; /* abu-abu soft */
     padding: 1rem 1.5rem;
 }
 
 .custom-footer {
-    border-top: 1px solid #e9ecef;
-    /* abu-abu soft */
+    border-top: 1px solid #e9ecef; /* abu-abu soft */
     padding: 1rem 1.5rem;
-    background: #f9fafb;
-    /* sedikit beda supaya kontras */
+    background: #f9fafb; /* sedikit beda supaya kontras */
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
 }
 
 /* Modal Cart Custom */
 .cart-modal {
-    max-height: 80vh;
-    /* Tinggi modal tetap */
+    max-height: 80vh; /* Tinggi modal tetap */
     display: flex;
     flex-direction: column;
 }
@@ -2345,20 +2487,17 @@ upcoming meetings page
 /* Modal Body Scrollable */
 .modal-body {
     overflow-y: auto;
-    padding-right: 10px;
-    /* Agar scroll tidak menabrak konten */
+    padding-right: 10px; /* Agar scroll tidak menabrak konten */
 }
 
 /* Scrollbar Stylish */
 .modal-body::-webkit-scrollbar {
     width: 6px;
 }
-
 .modal-body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
 }
-
 .modal-body::-webkit-scrollbar-track {
     background: transparent;
 }
@@ -2412,8 +2551,7 @@ upcoming meetings page
 
 /* Card tour package */
 .tour-card {
-    background: #fff;
-    /* card tetap putih */
+    background: #fff; /* card tetap putih */
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -2429,8 +2567,7 @@ upcoming meetings page
 
 .tour-img {
     width: 100%;
-    height: 180px;
-    /* tinggi gambar */
+    height: 180px; /* tinggi gambar */
     background-size: cover;
     background-position: center;
 }
@@ -2477,231 +2614,14 @@ upcoming meetings page
     background-color: #0b5ed7;
 }
 
-/* Blog Card */
-.blog-card {
-    background: #fff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    /* biar jelas kalau bisa diklik */
-    position: relative;
-}
-
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.blog-img {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-}
-
-.blog-tag {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #0d6efd;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px 14px;
-    border-radius: 30px;
-}
-
-.blog-card .stretched-link {
-    position: absolute;
-    inset: 0;
-    /* link menutupi seluruh card */
-    z-index: 5;
-}
-
-/* Detail Blog */
-.blog-thumbnail {
-    width: 100%;
-    height: 450px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-.blog-title {
-    font-weight: 700;
-    color: #1f272b;
-    font-size: 1.6rem;
-    /* cukup besar tapi tidak berlebihan */
-    line-height: 1.4;
-    margin-bottom: 1rem;
-}
-
-.blog-meta {
-    font-size: 14px;
-}
-
-.blog-content p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #444;
-}
-
-.blog-content h4 {
-    margin-top: 25px;
-    font-weight: 600;
-    color: #0d6efd;
-}
-
-.blog-content ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-.blog-content ul li {
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #555;
-}
-
-/* Search Filter Card */
-.search-filter-card {
-    position: absolute;
-    bottom: -50px;
-    /* card keluar setengah ke bawah heading */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1100px;
-    /* biar ga terlalu panjang di layar besar */
-    z-index: 10;
-}
-
-.search-filter-card .filter-card {
-    border-radius: 20px;
-    padding: 20px 25px;
-    background: #fff;
-    border: none;
-}
-
-.search-filter-card .form-label {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.search-filter-card .form-control,
-.search-filter-card .form-select {
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    transition: all 0.3s ease;
-}
-
-.search-filter-card .form-control:focus,
-.search-filter-card .form-select:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
-}
-
-.search-filter-card button {
-    border-radius: 12px;
-    font-weight: 600;
-    padding: 10px;
-}
-
-/* Mobile (max 768px) */
-@media (max-width: 768px) {
-    .search-filter-card {
-        position: relative;
-        /* biar ga nabrak navbar */
-        bottom: auto;
-        left: auto;
-        transform: none;
-        max-width: 100%;
-        padding: 0 15px;
-        margin-top: 80px;
-        /* tetap sedikit overlap heading biar estetik */
-    }
-
-    .search-filter-card .filter-card {
-        border-radius: 16px;
-        padding: 15px 18px;
-    }
-
-    .search-filter-card .form-label {
-        font-size: 13px;
-        font-weight: 600;
-        color: #444;
-        margin-bottom: 4px;
-    }
-
-    .search-filter-card input,
-    .search-filter-card select {
-        font-size: 14px;
-        padding: 8px 10px;
-        border-radius: 10px;
-    }
-
-    .search-filter-card button {
-        margin-top: 10px;
-        width: 100%;
-        border-radius: 12px;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 10px;
-    }
-
-    /* Form jadi full kolom */
-    .search-filter-card .row {
-        row-gap: 12px;
-    }
-
-    .search-filter-card .col-md-4,
-    .search-filter-card .col-md-3,
-    .search-filter-card .col-md-2 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-/* Extra small (<= 400px) */
-@media (max-width: 400px) {
-    .search-filter-card .filter-card {
-        padding: 12px 15px;
-    }
-
-    .search-filter-card .form-label {
-        font-size: 12px;
-    }
-
-    .search-filter-card input,
-    .search-filter-card select {
-        font-size: 13px;
-    }
-
-    .search-filter-card button {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
 section.meetings-page {
-    background-image: url(../images/batik-samar.png);
+    background-image: url(../images/bg-putih-batik.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 140px;
-    padding-bottom: 0px;
+    padding-bottom: 80px;
 }
 
 section.meetings-page .filters {
@@ -2772,12 +2692,285 @@ section.meetings-page .pagination ul li a:hover {
 
 section.meetings-page .meeting-single-item {
     background: #fff;
-    border-radius: 15px;
-    /* kasih radius atas & bawah */
+    border-radius: 15px; /* kasih radius atas & bawah */
+    overflow: hidden; /* biar isi dalam card ikut melengkung */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* opsional biar keliatan lebih rapi */
+}
+
+/* FAQ */
+.faq-section {
+    padding: 40px 20px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.faq-title {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+.faq-item {
+    margin-bottom: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    /* biar isi dalam card ikut melengkung */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    /* opsional biar keliatan lebih rapi */
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+.faq-item:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.15);
+}
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+.faq-question:hover {
+    background: #f3f3f3;
+}
+.faq-question span {
+    font-size: 20px;
+    color: #0d6efd;
+    font-weight: bold;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    padding: 0 20px;
+    transition: all 0.4s ease;
+}
+.faq-answer p {
+    padding: 12px 0;
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* Blog Card */
+.blog-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; /* biar jelas kalau bisa diklik */
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.blog-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 30px;
+}
+
+.blog-card .stretched-link {
+    position: absolute;
+    inset: 0; /* link menutupi seluruh card */
+    z-index: 5;
+}
+
+/* Detail Blog */
+.blog-thumbnail {
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+    font-weight: 700;
+    color: #1f272b;
+    font-size: 1.6rem; /* cukup besar tapi tidak berlebihan */
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.blog-meta {
+    font-size: 14px;
+}
+
+.blog-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.blog-content h4 {
+    margin-top: 25px;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.blog-content ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.blog-content ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Search Filter Card */
+.search-filter-card {
+    position: absolute;
+    bottom: -50px; /* card keluar setengah ke bawah heading */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px; /* biar ga terlalu panjang di layar besar */
+    z-index: 10;
+}
+
+.search-filter-card .filter-card {
+    border-radius: 20px;
+    padding: 20px 25px;
+    background: #fff;
+    border: none;
+}
+
+.search-filter-card .form-label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.search-filter-card .form-control,
+.search-filter-card .form-select {
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.search-filter-card .form-control:focus,
+.search-filter-card .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+}
+
+.search-filter-card button {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+    .search-filter-card {
+        position: relative; /* biar ga nabrak navbar */
+        bottom: auto;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        padding: 0 15px;
+        margin-top: 80px; /* tetap sedikit overlap heading biar estetik */
+    }
+
+    .search-filter-card .filter-card {
+        border-radius: 16px;
+        padding: 15px 18px;
+    }
+
+    .search-filter-card .form-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 4px;
+    }
+
+    .search-filter-card input,
+    .search-filter-card select {
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 10px;
+    }
+
+    .search-filter-card button {
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    /* Form jadi full kolom */
+    .search-filter-card .row {
+        row-gap: 12px;
+    }
+
+    .search-filter-card .col-md-4,
+    .search-filter-card .col-md-3,
+    .search-filter-card .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Extra small (<= 400px) */
+@media (max-width: 400px) {
+    .search-filter-card .filter-card {
+        padding: 12px 15px;
+    }
+
+    .search-filter-card .form-label {
+        font-size: 12px;
+    }
+
+    .search-filter-card input,
+    .search-filter-card select {
+        font-size: 13px;
+    }
+
+    .search-filter-card button {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 .meeting-single-item .thumb {
@@ -2926,8 +3119,7 @@ section.meetings-page .meeting-single-item {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 480px;
-    /* atur sesuai kebutuhan konten */
+    min-height: 480px; /* atur sesuai kebutuhan konten */
     transition: all 0.35s ease;
 }
 
@@ -2964,7 +3156,6 @@ section.meetings-page .meeting-single-item {
     font-weight: 500;
     transition: 0.3s;
 }
-
 .nav-pills .nav-link.active {
     background: #0d6efd;
     color: #fff;
@@ -2979,7 +3170,6 @@ form label {
     color: #444;
     margin-bottom: 6px;
 }
-
 form .form-control,
 form .form-select {
     border-radius: 10px;
@@ -2989,13 +3179,11 @@ form .form-select {
     transition: all 0.3s ease;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
 }
-
 form .form-control:focus,
 form .form-select:focus {
     border-color: #0d6efd;
     box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
 }
-
 form .btn-primary {
     border-radius: 12px;
     font-size: 16px;
@@ -3003,7 +3191,6 @@ form .btn-primary {
     padding: 12px 0;
     transition: all 0.3s ease;
 }
-
 form .btn-primary:hover {
     background-color: #0b5ed7;
     transform: translateY(-2px) scale(1.02);
@@ -3016,7 +3203,6 @@ form .btn-primary:hover {
     transform: translateY(15px) scale(0.98);
     transition: all 0.45s ease;
 }
-
 .fade-sync.show.active {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -3027,7 +3213,6 @@ form .btn-primary:hover {
     list-style: none;
     padding-left: 0;
 }
-
 .booking-steps li {
     display: flex;
     align-items: center;
@@ -3036,7 +3221,6 @@ form .btn-primary:hover {
     font-size: 15px;
     color: #444;
 }
-
 .booking-steps li i {
     color: #0d6efd;
     font-size: 18px;
@@ -3055,10 +3239,8 @@ form .btn-primary:hover {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #f8f9ff;
-    /* soft background */
-    border-left: 4px solid #0d6efd;
-    /* highlight */
+    background: #f8f9ff; /* soft background */
+    border-left: 4px solid #0d6efd; /* highlight */
     padding: 12px 16px;
     border-radius: 8px;
     font-size: 15px;
@@ -3088,26 +3270,20 @@ form .btn-primary:hover {
 /* Booking end */
 
 .service-item {
-    background: #ffffff;
-    /* putih */
+    background: #ffffff; /* putih */
     transition: 0.5s;
     border-radius: 6px;
     height: 230px;
-    border: none;
-    /* hapus border luar */
-    outline: 2px solid #0d6efd;
-    /* garis di luar */
-    outline-offset: -6px;
-    /* menjorok ke dalam */
+    border: none; /* hapus border luar */
+    outline: 2px solid #0d6efd; /* garis di luar */
+    outline-offset: -6px; /* menjorok ke dalam */
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-item:hover {
     margin-top: -10px;
-    background: #0d6efd;
-    /* biru umum */
-    border-color: #0d6efd;
-    /* garis ikut jadi biru saat hover */
+    background: #0d6efd; /* biru umum */
+    border-color: #0d6efd; /* garis ikut jadi biru saat hover */
     outline: 2px solid #ffff;
 }
 
@@ -3132,13 +3308,11 @@ form .btn-primary:hover {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
 .btn-detail:hover {
     background: linear-gradient(45deg, #0a58ca, #0d6efd);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-
 .btn-detail i {
     margin-right: 6px;
     font-size: 1rem;
@@ -3149,20 +3323,56 @@ form .btn-primary:hover {
     border-radius: 15px;
     overflow: hidden;
 }
-
 .modal-header {
     border-bottom: none;
     padding: 1rem 1.5rem;
 }
-
 .modal-title {
     font-size: 1.2rem;
 }
-
 .modal-body {
     padding: 1.5rem;
     max-height: 70vh;
     overflow-y: auto;
+}
+
+/* Modal Order Styling */
+/* Modal Order Styling */
+.order-modal {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px; /* supaya tidak mepet ke bawah layar */
+}
+
+.order-modal .modal-body {
+    padding: 1.5rem;
+    max-height: 70vh; /* sama dengan modal cart */
+    overflow-y: auto; /* biar scrollable */
+}
+
+.order-item {
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.order-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.order-modal .modal-header,
+.order-modal .modal-footer {
+    background: #f8f9fa;
+}
+
+/* Konsisten dengan tombol checkout */
+.btn-checkout {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    color: #fff;
+}
+.btn-checkout:hover {
+    background: linear-gradient(135deg, #20c997, #28a745);
+    color: #fff;
 }
 
 /* 
@@ -3221,7 +3431,6 @@ profile page
     border-radius: 10px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
 }
-
 .profile-content .form-group {
     margin-bottom: 20px;
 }
@@ -3230,7 +3439,6 @@ profile page
 .content-section {
     display: none;
 }
-
 .content-section.active {
     display: block;
 }
@@ -3239,7 +3447,6 @@ profile page
 .profile-picture {
     position: relative;
 }
-
 .profile-picture .profile-img {
     width: 98px;
     height: 98px;
@@ -3248,7 +3455,6 @@ profile page
     border: 1px solid #edededff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 .upload-btn label {
     cursor: pointer;
 }
@@ -3259,14 +3465,12 @@ profile page
     margin-bottom: 6px;
     color: #444;
 }
-
 .profile-content form .form-control {
     border-radius: 8px;
     border: 1px solid #ddd;
     padding: 10px 14px;
     transition: all 0.2s ease;
 }
-
 .profile-content form .form-control:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -3279,7 +3483,6 @@ profile page
     color: #555;
     cursor: pointer;
 }
-
 .gender-options input {
     margin-right: 5px;
 }
@@ -3336,16 +3539,14 @@ profile page
 }
 
 .profile-sidebar ul li.sidebar-heading {
-    font-size: 14px;
-    /* subjudul */
+    font-size: 14px; /* subjudul */
     letter-spacing: 0.5px;
     font-weight: 600;
     color: #6c757d;
 }
 
 .profile-sidebar ul li a {
-    font-size: 14px;
-    /* menu item */
+    font-size: 14px; /* menu item */
 }
 
 /* tabel riwayat */
@@ -3375,25 +3576,20 @@ profile page
 
 @media (max-width: 768px) {
     .profile-sidebar {
-        margin-bottom: 20px;
-        /* kasih jarak bawah saat sidebar ada di atas konten */
+        margin-bottom: 20px; /* kasih jarak bawah saat sidebar ada di atas konten */
     }
 
     .profile-content {
-        padding: 20px;
-        /* biar lebih enak dibaca di HP */
+        padding: 20px; /* biar lebih enak dibaca di HP */
     }
 }
-
 @media (max-width: 992px) {
     .profile-sidebar {
-        margin-bottom: 20px;
-        /* kasih jarak bawah saat sidebar ada di atas konten */
+        margin-bottom: 20px; /* kasih jarak bawah saat sidebar ada di atas konten */
     }
 
     .profile-content {
-        padding: 20px;
-        /* biar lebih enak dibaca di HP */
+        padding: 20px; /* biar lebih enak dibaca di HP */
     }
 }
 
@@ -3407,15 +3603,12 @@ responsive
     .services .owl-nav .owl-next {
         right: -30px;
     }
-
     .services .owl-nav .owl-prev {
         left: -25px;
     }
-
     .our-courses .owl-nav .owl-next {
         right: -30px;
     }
-
     .our-courses .owl-nav .owl-prev {
         left: -25px;
     }
@@ -3425,15 +3618,12 @@ responsive
     .services .owl-nav .owl-next {
         right: -70px;
     }
-
     .services .owl-nav .owl-prev {
         left: -65px;
     }
-
     .our-courses .owl-nav .owl-next {
         right: -70px;
     }
-
     .our-courses .owl-nav .owl-prev {
         left: -65px;
     }
@@ -3443,15 +3633,12 @@ responsive
     .services .owl-nav .owl-next {
         right: -30px;
     }
-
     .services .owl-nav .owl-prev {
         left: -25px;
     }
-
     .our-courses .owl-nav .owl-next {
         right: -30px;
     }
-
     .our-courses .owl-nav .owl-prev {
         left: -25px;
     }
@@ -3461,15 +3648,12 @@ responsive
     .services .owl-nav .owl-next {
         display: none;
     }
-
     .services .owl-nav .owl-prev {
         display: none;
     }
-
     .our-courses .owl-nav .owl-next {
         display: none;
     }
-
     .our-courses .owl-nav .owl-prev {
         display: none;
     }

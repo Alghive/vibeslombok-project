@@ -117,12 +117,19 @@
     <!-- Modal Chart End -->
 
     <section class="heading-page header-text" id="top"
-        style="background-image: url('assets/images/pantai-4.jpg'); display:none;">
+        style="background-image: url('assets/images/bg-faq.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h6>Paket Wisata Pulau Lombok</h6>
-                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    @if ($user->profile_picture)
+                    <img src="{{ asset('storage/' . $user->profile_picture) }}"
+                        alt="Foto Profil" class="profile-img"
+                        style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                     @else
+                    <img src="{{ asset('assets/images/user.jpg') }}"
+                        alt="Foto Profil" class="profile-img"
+                        style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                    @endif
                 </div>
             </div>
         </div>

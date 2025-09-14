@@ -18,9 +18,10 @@
                                     <li><a href="{{ route('tour-package') }}">Tour Package</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="#courses">About Us</a></li>
-                            <li class=""><a href="#contact">Contact</a></li>
-                            <li class=""><a href="{{ route('blog') }}">Blog</a></li>
+                            <li><a href="#courses">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="{{ route('blog') }}">Blog</a></li>
+                            <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <!-- Cart Icon -->
                             <li class="nav-item cart-icon">
                             <a href="javascript:void(0)" class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
