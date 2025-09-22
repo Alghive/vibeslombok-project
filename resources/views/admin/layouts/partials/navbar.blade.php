@@ -1,9 +1,18 @@
 
-    <nav class="app-header navbar navbar-expand bg-body">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">AdminLTE 4</a>
-        </div>
-    </nav>
+   <!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto"></ul>
+    <!-- Navbar Search -->
+</nav>
+<!-- /.navbar -->
 
 
 

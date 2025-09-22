@@ -4,150 +4,184 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <div class="app-content-header">
-        <div class="container-fluid">
-            <h1 class="mb-2">Dashboard</h1>
+    
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-lightblue">
+            <div class="inner">
+                <h3>50</h3>
+                <p class="text-capitalize">User Terdaftar</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
-    <div class="app-content">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Small boxes -->
-                <div class="col-lg-3 col-6">
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
-                            <p>New Orders</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>53%</h3>
-                            <p>Bounce Rate</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3>44</h3>
-                            <p>User Registrations</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-user-plus"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3>65</h3>
-                            <p>Unique Visitors</p>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Chart row -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">Sales Overview</div>
-                        <div class="card-body">
-                            <canvas id="salesChart" height="120"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">User Growth</div>
-                        <div class="card-body">
-                            <canvas id="userChart" height="120"></canvas>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-maroon">
+            <div class="inner">
+                <h3>20</h3>
+                <p class="text-capitalize">Daftar Mobil</p>
             </div>
+            <div class="icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
 
-            <!-- Table Example -->
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">Latest Transactions</div>
-                        <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>User</th>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                        <th>Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#001</td>
-                                        <td>John Doe</td>
-                                        <td>$250</td>
-                                        <td><span class="badge bg-success">Paid</span></td>
-                                        <td>2025-08-25</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#002</td>
-                                        <td>Jane Smith</td>
-                                        <td>$100</td>
-                                        <td><span class="badge bg-warning">Pending</span></td>
-                                        <td>2025-08-27</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-secondary">
+            <div class="inner">
+                <h3>9</h3>
+                <p class="text-capitalize">Daftar Paket Wisata</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-olive">
+            <div class="inner">
+                <h3>10</h3>
+                <p class="text-capitalize">Daftar Blog</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-blog"></i>
+            </div>
+            <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="info-box mb-3 bg-light">
+            <span class="info-box-icon" style="background-color: #C6E7FF; border-radius: 10px;"><i class="fas fa-money-bill-wave text-lightblue"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Pendapatan Rental Mobil</span>
+                <span class="info-box-number"><strong>Rp 800.000</strong></span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="info-box mb-3 bg-light">
+            <span class="info-box-icon" style="background-color: #C6E7FF; border-radius: 10px;"><i class="fas fa-money-bill-wave text-lightblue"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Pendapatan Paket Wisata</span>
+                <span class="info-box-number"><strong>Rp 700.000</strong></span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="info-box mb-3 bg-light">
+            <span class="info-box-icon" style="background-color: #C6E7FF; border-radius: 10px;"><i class="fas fa-money-bill-wave text-lightblue"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Total Pendapatan</span>
+                <span class="info-box-number"><strong>Rp 1.500.000</strong></span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    </div>
+
+    {{-- Grafik --}}
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header     ">
+                <h3 class="card-title">Mobil Paling Banyak Disewa (Merk)</h3>
+            </div>
+            <div class="card-body">
+                <canvas id="chartMobil"></canvas>
             </div>
         </div>
     </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header ">
+                <h3 class="card-title">Paket Wisata Terlaris</h3>
+            </div>
+            <div class="card-body">
+                <canvas id="chartWisata"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 @endsection
 
 @push('scripts')
-    <script>
-        const ctx1 = document.getElementById('salesChart');
-        new Chart(ctx1, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                datasets: [{
-                    label: 'Sales',
-                    data: [120, 150, 180, 90, 200, 170],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    fill: false
-                }]
-            }
-        });
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Data contoh Mobil
+    const dataMobil = {
+        labels: ['Toyota', 'Honda', 'Suzuki', 'Daihatsu', 'Mitsubishi'],
+        datasets: [{
+            label: 'Jumlah Penyewaan',
+            data: [12, 19, 7, 15, 9],
+            backgroundColor: [
+                '#007bff', '#28a745', '#ffc107', '#dc3545', '#6c757d'
+            ]
+        }]
+    };
 
-        const ctx2 = document.getElementById('userChart');
-        new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                datasets: [{
-                    label: 'Users',
-                    data: [30, 50, 70, 90, 110, 150],
-                    backgroundColor: 'rgba(54, 162, 235, 0.7)'
-                }]
+    const configMobil = {
+        type: 'bar',
+        data: dataMobil,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                title: { display: true, text: 'Mobil Paling Banyak Disewa' }
             }
-        });
-    </script>
+        }
+    };
+
+    new Chart(
+        document.getElementById('chartMobil'),
+        configMobil
+    );
+
+    // Data contoh Paket Wisata
+    const dataWisata = {
+        labels: ['Gili Trawangan', 'Rinjani Trekking', 'Senggigi Beach', 'Pink Beach', 'Tetebatu'],
+        datasets: [{
+            label: 'Jumlah Pemesanan',
+            data: [25, 10, 15, 8, 12],
+            backgroundColor: [
+                '#17a2b8', '#6610f2', '#fd7e14', '#20c997', '#e83e8c'
+            ]
+        }]
+    };
+
+    const configWisata = {
+        type: 'bar',
+        data: dataWisata,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                title: { display: true, text: 'Paket Wisata Terlaris' }
+            }
+        }
+    };
+
+    new Chart(
+        document.getElementById('chartWisata'),
+        configWisata
+    );
+</script>
 @endpush

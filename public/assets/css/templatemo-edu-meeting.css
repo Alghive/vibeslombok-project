@@ -3574,6 +3574,62 @@ profile page
     overflow-x: auto;
 }
 
+/* tabel riwayat */
+.table th,
+.table td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.modal-content {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.modal-header .close {
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+.modal-header .close:hover {
+  opacity: 1;
+}
+.form-label {
+  font-weight: 500;
+  font-size: 13px;
+  color: #555;
+}
+.form-control[readonly] {
+  background-color: #f4f6f9;
+}
+.modal-footer .btn {
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+.btn-details {
+  border-radius: 20px; 
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
 @media (max-width: 768px) {
     .profile-sidebar {
         margin-bottom: 20px; /* kasih jarak bawah saat sidebar ada di atas konten */

@@ -371,43 +371,55 @@
                                                 </div>
 
 
+                                                <!-- Riwayat -->
                                                 <div id="riwayat" class="content-section">
-                                                    <h4 class="mb-4">Riwayat Pemesanan</h4>
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-hover">
-                                                            <thead class="thead-light">
-                                                                <tr>
-                                                                    <th>No</th>
-                                                                    <th>Tanggal</th>
-                                                                    <th>Nomor Pesanan</th>
-                                                                    <th>Produk</th>
-                                                                    <th>Total Harga</th>
-                                                                    <th>Status</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>25-08-2025</td>
-                                                                    <td>#ORD12345</td>
-                                                                    <td>Paket wisata</td>
-                                                                    <td>Rp 150.000</td>
-                                                                    <td><span class="badge badge-success">Selesai</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>20-08-2025</td>
-                                                                    <td>#ORD12346</td>
-                                                                    <td>Toyota Avanza</td>
-                                                                    <td>Rp 250.000</td>
-                                                                    <td><span class="badge badge-warning">Proses</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <!-- Tambahkan baris berikutnya sesuai data -->
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                <h4 class="mb-4">Riwayat Pemesanan</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover align-middle">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                        <th>No</th>
+                                                        <th>Tanggal</th>
+                                                        <th>Nomor Pesanan</th>
+                                                        <th>Produk</th>
+                                                        <th>Total Harga</th>
+                                                        <th>Status</th>
+                                                        <th>Alamat</th>
+                                                        <th>Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                        <td>1</td>
+                                                        <td>25-08-2025</td>
+                                                        <td>#ORD12345</td>
+                                                        <td>Paket wisata</td>
+                                                        <td>Rp 150.000</td>
+                                                        <td><span class="badge badge-success">Selesai</span></td>
+                                                        <td>Jl. Mawar No.12</td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-outline-primary btn-details" data-bs-toggle="modal" data-bs-target="#detailModal1">
+                                                            Detail
+                                                            </button>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>2</td>
+                                                        <td>20-08-2025</td>
+                                                        <td>#ORD12346</td>
+                                                        <td>Toyota Avanza</td>
+                                                        <td>Rp 250.000</td>
+                                                        <td><span class="badge badge-warning">Proses</span></td>
+                                                        <td>Jl. Melati No.7</td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-outline-primary btn-details" data-bs-toggle="modal" data-bs-target="#detailModal1">
+                                                            Detail
+                                                            </button>
+                                                        </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    </table>
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -416,6 +428,118 @@
                             </div>
                         </div>
                     </div>
-    </section>
+
+                    <!-- Modal Detail Pesanan 1 -->
+<!-- Modal Detail Pesanan -->
+<div class="modal fade" id="detailModal1" tabindex="-1" aria-labelledby="detailModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      
+      <!-- Header -->
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title font-weight-bold" id="detailModalLabel1">
+          <i class="fas fa-receipt text-primary mr-2"></i> Detail Pesanan #ORD12345
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <!-- Body -->
+      <form>
+        <div class="modal-body pt-2">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Tanggal</label>
+              <input type="text" class="form-control form-control-sm" value="25-08-2025" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Status</label>
+              <input type="text" class="form-control form-control-sm" value="Selesai" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Produk</label>
+              <input type="text" class="form-control form-control-sm" value="Paket wisata" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Total Harga</label>
+              <input type="text" class="form-control form-control-sm" value="Rp 150.000" readonly>
+            </div>
+            <div class="col-12 mb-3">
+              <label class="form-label">Alamat</label>
+              <textarea class="form-control form-control-sm" rows="3">Jl. Mawar No.12, Ponorogo</textarea>
+              <small class="form-text text-muted">Hanya alamat yang dapat diubah.</small>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-sm btn-light" data-bs-dismiss="modal">
+           Batal
+          </button>
+          <button type="submit" class="btn btn-sm btn-primary">
+             Simpan Perubahan
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Detail Pesanan 2 -->
+<!-- Modal Detail Pesanan -->
+<div class="modal fade" id="detailModal2" tabindex="-1" aria-labelledby="detailModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      
+      <!-- Header -->
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title font-weight-bold" id="detailModalLabel1">
+          <i class="fas fa-receipt text-primary mr-2"></i> Detail Pesanan #ORD12345
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <!-- Body -->
+      <form>
+        <div class="modal-body pt-2">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Tanggal</label>
+              <input type="text" class="form-control form-control-sm" value="25-08-2025" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Status</label>
+              <input type="text" class="form-control form-control-sm" value="Selesai" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Produk</label>
+              <input type="text" class="form-control form-control-sm" value="Paket wisata" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Total Harga</label>
+              <input type="text" class="form-control form-control-sm" value="Rp 150.000" readonly>
+            </div>
+            <div class="col-12 mb-3">
+              <label class="form-label">Alamat</label>
+              <textarea class="form-control form-control-sm" rows="3">Jl. Mawar No.12, Ponorogo</textarea>
+              <small class="form-text text-muted">Hanya alamat yang dapat diubah.</small>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-sm btn-light" data-bs-dismiss="modal">
+            Batal
+          </button>
+          <button type="submit" class="btn btn-sm btn-primary">
+             Simpan Perubahan
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
 
 @endsection
