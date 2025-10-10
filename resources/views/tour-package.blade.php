@@ -181,11 +181,11 @@
                             <div class="tour-price"><span>IDR 2.500K</span> / paket</div>
 
                             <!-- <ul class="tour-specs list-unstyled mt-3">
-                  <li><i class="bi bi-hotel text-primary"></i> Hotel Bintang 3</li>
-                  <li><i class="bi bi-bus-front text-success"></i> Transportasi AC</li>
-                  <li><i class="bi bi-egg-fried text-warning"></i> 6x Makan</li>
-                  <li><i class="bi bi-people text-danger"></i> Tour Guide</li>
-                </ul> -->
+                      <li><i class="bi bi-hotel text-primary"></i> Hotel Bintang 3</li>
+                      <li><i class="bi bi-bus-front text-success"></i> Transportasi AC</li>
+                      <li><i class="bi bi-egg-fried text-warning"></i> 6x Makan</li>
+                      <li><i class="bi bi-people text-danger"></i> Tour Guide</li>
+                    </ul> -->
 
                             <a href="contact.html" class="btn btn-primary rounded-pill mt-3">Book Now</a>
                         </div>
