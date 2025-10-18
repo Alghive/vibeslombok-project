@@ -18,7 +18,7 @@
                                     <li><a href="{{ route('tour-package') }}">Tour Package</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#courses">About Us</a></li>
+                            <li><a href="{{ route('about') }}">About Us</a></li>
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="{{ route('blog') }}">Blog</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>

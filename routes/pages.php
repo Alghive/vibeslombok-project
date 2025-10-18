@@ -38,4 +38,8 @@ Route::prefix('/')->group(function () {
     Route::get('/faq', function () {
         return view('faq'); // otomatis cari resources/views/faq.blade.php
     })->name('faq');
+
+    Route::get('/about', function () {
+        return view('about'); // otomatis cari resources/views/about.blade.php
+    })->name('about');
 });
